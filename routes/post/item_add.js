@@ -1,4 +1,5 @@
-const Item = require('../../models/Item');
+const schemas = require('../../models/schemas');
+const Item = schemas.item;
 
 module.exports = function (req, res) {
     const redirect_url = '/';
