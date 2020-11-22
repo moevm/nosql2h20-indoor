@@ -1,37 +1,17 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const DEBUG = true;
+const PORT = 3000;
 
+console.log = DEBUG ? console.log : function () {};
+
+const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 
 app.set('view engine', 'ejs');
+app.set('views', './views');
 
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 
-// Connect to MongoDB
-mongoose
-  .connect(
-    'mongodb://mongo:27017/docker-node-mongo',
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+app.use('/', require('./routes/__init__'));
 
-const Item = require('./models/Item');
-
-app.get('/', (req, res) => {
-  Item.find()
-    .then(items => res.render('index', { items }))
-    .catch(err => res.status(404).json({ msg: 'No items found' }));
-});
-
-app.post('/item/add', (req, res) => {
-  const newItem = new Item({
-    name: req.body.name
-  });
-
-  newItem.save().then(item => res.redirect('/'));
-});
-
-const port = 3000;
-
-app.listen(port, () => console.log('Server running...'));
+app.listen(PORT, () => console.info(`Server running at port ${PORT}`));
