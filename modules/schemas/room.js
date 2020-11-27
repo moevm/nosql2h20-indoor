@@ -45,4 +45,18 @@ RoomSchema.virtual('id').get(function () {
     return this._id;
 });
 
+const mongoose_fuzzy_searching = require('mongoose-fuzzy-searching');
+RoomSchema.plugin(mongoose_fuzzy_searching, { fields: [
+        {
+            name: 'tags',
+            minSize: 2,
+            weight: 5,
+        },
+        {
+            name: 'information',
+            minSize: 2,
+            weight: 3,
+        }
+    ] });
+
 module.exports = Room = mongoose.model('room', RoomSchema, 'rooms');

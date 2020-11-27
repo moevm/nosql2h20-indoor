@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table search</title>
+    <link rel="stylesheet" href="stylesheets/table_search_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="window">
+    <div class="search-block">
+        <div class="search-box search-elem">
+            <input type="text" placeholder="Search" class="search-input" autocomplete="off">
+            <input type="submit" value="&#10006;" class="search-button search-clear">
+            <input type="submit" class="fa fa-search search-button search-submit" value="&#xF002;">
+        </div>
+        <div class="search-list-block">
+            <ul class="search-item-list"></ul>
+        </div>
+    </div>
+    <div class="inf-block">
+        <div class="inf-block__info hidden"></div>
+    </div>
+</div>
+<script type="text/javascript" src="javascript/table_search_scripts.js"></script>
+</body>
+</html>

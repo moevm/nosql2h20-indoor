@@ -18,10 +18,11 @@ function add_route(method, path, file) {
 }
 
 // GET
-add_route('GET', '/', './get/index')
+add_route('GET', '/', './get/index');
 
 // POST
-add_route('POST', '/item/add', './post/item_add')
+add_route('POST', '/item/add', './post/item_add');
+add_route('POST', '/search', './post/search');
 
 
 module.exports = router;
