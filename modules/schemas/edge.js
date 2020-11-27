@@ -30,6 +30,6 @@ const EdgeSchema = new Schema({
         type: Number,
         required: true
     }
-});
+}, { _id: false });
 
 module.exports = EdgeSchema;

@@ -5,7 +5,7 @@ const room_type = constants.room_type;
 const wallSchema = require('./wall');
 
 const RoomSchema = new Schema({
-    id: {
+    _id: {
         type: Number,
         required: true
     },
@@ -30,7 +30,7 @@ const RoomSchema = new Schema({
         required: false
     },
     tags: {
-        type: Number,
+        type: String,
         required: true,
         default: ''
     },
@@ -39,6 +39,10 @@ const RoomSchema = new Schema({
         required: false
     },
     walls: [wallSchema]
+}, {versionKey: false});
+
+RoomSchema.virtual('id').get(function () {
+    return this._id;
 });
 
-module.exports = Room = mongoose.model('room', RoomSchema);
+module.exports = Room = mongoose.model('room', RoomSchema, 'rooms');

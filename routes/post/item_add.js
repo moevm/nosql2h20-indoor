@@ -1,4 +1,4 @@
-const schemas = require('../../models/schemas');
+const schemas = require('../../modules/schemas');
 const Item = schemas.item;
 
 module.exports = function (req, res) {

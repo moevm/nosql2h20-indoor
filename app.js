@@ -1,5 +1,8 @@
-const DEBUG = true;
-const PORT = 3000;
+require('dotenv').config()
+
+const DEBUG = process.env.DEBUG_NESSAGES_ENABLED === "true";
+const SERVER_HOST = process.env.SERVER_HOST;
+const SERVER_PORT = process.env.SERVER_PORT;
 
 console.log = DEBUG ? console.log : function () {};
 
@@ -14,4 +17,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/', require('./routes/__init__'));
 
-app.listen(PORT, () => console.info(`Server running at port ${PORT}`));
+require("./modules/db_init");
+
+let server = app.listen(SERVER_PORT, SERVER_HOST, () => {
+    console.info(`Server running at http://${server.address().address}:${server.address().port}`)
+});
