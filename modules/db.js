@@ -11,6 +11,7 @@ mongoose
         url,
         {
             useNewUrlParser: true,
+            useCreateIndex: true,
             useUnifiedTopology: true
         }
     )

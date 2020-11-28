@@ -1,5 +1,6 @@
+const path = require('path');
+
 module.exports = {
-    room: require('./schemas/room'),
-    vertex: require('./schemas/vertex'),
-    item: require('./schemas/item')
+    room: require(path.join(appRoot, 'modules/schemas/room')),
+    vertex: require(path.join(appRoot, 'modules/schemas/vertex'))
 }

@@ -1,8 +1,9 @@
-const mongoose = require('../db');
+const path = require('path');
+const mongoose = require(path.join(appRoot, 'modules/db'));
 const Schema = mongoose.Schema;
-const constants = require('../constants');
+const constants = require(path.join(appRoot, 'modules/constants'));
 const room_type = constants.room_type;
-const wallSchema = require('./wall');
+const wallSchema = require(path.join(appRoot, 'modules/schemas/wall'));
 
 const RoomSchema = new Schema({
     _id: {
@@ -49,12 +50,11 @@ const mongoose_fuzzy_searching = require('mongoose-fuzzy-searching');
 RoomSchema.plugin(mongoose_fuzzy_searching, { fields: [
         {
             name: 'tags',
-            minSize: 2,
             weight: 5,
         },
         {
             name: 'information',
-            minSize: 2,
+            minSize: 3,
             weight: 3,
         }
     ] });

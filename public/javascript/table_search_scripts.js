@@ -1,8 +1,3 @@
-let list = ['Here is some text',
-    'Here is a little more text',
-    'And here is much much more text than in previous card just for testing',
-    'I am going to put couple strings of random text here just for fun. just because I can do that. Nothing will stop me from that. Couple more random words and I am done here'];
-
 let example_info = [];
 
 let search_list = document.querySelector('.search-item-list');

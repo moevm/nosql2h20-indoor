@@ -1,4 +1,5 @@
-const schemas = require('./schemas');
+const path = require('path');
+const schemas = require(path.join(appRoot, 'modules/schemas'));
 const Room = schemas.room;
 
 const INIT_DATA_FILE = process.env.INIT_DATA_FILE;

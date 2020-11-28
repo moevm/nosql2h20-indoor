@@ -1,4 +1,5 @@
 let router = require('express').Router();
+const path = require('path');
 
 function add_route(method, path, file) {
     switch (method.toUpperCase()) {
@@ -18,11 +19,10 @@ function add_route(method, path, file) {
 }
 
 // GET
-add_route('GET', '/', './get/index');
+add_route('GET', '/', path.join(appRoot, 'routes/get/index'));
 
 // POST
-add_route('POST', '/item/add', './post/item_add');
-add_route('POST', '/search', './post/search');
+add_route('POST', '/search', path.join(appRoot, 'routes/post/search'));
 
 
 module.exports = router;

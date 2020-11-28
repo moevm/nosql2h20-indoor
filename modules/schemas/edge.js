@@ -1,5 +1,7 @@
-const mongoose = require('../db');
+const path = require('path');
+const mongoose = require(path.join(appRoot, 'modules/db'));
 const Schema = mongoose.Schema;
+
 
 const EdgeSchema = new Schema({
     target_id: {

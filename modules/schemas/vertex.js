@@ -1,6 +1,7 @@
-const mongoose = require('../db');
+const path = require('path');
+const mongoose = require(path.join(appRoot, 'modules/db'));
+const edgeSchema = require(path.join(appRoot, 'modules/schemas/edge'));
 const Schema = mongoose.Schema;
-const edgeSchema = require('./edge');
 
 const VertexSchema = new Schema({
     _id: {

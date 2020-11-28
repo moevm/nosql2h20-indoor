@@ -9,6 +9,7 @@ console.log = DEBUG ? console.log : function () {};
 const express = require('express');
 const app = express();
 const path = require('path');
+global.appRoot = __dirname;
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');

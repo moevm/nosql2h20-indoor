@@ -1,4 +1,5 @@
-const mongoose = require('../db');
+const path = require('path');
+const mongoose = require(path.join(appRoot, 'modules/db'));
 const Schema = mongoose.Schema;
 
 const WallSchema = new Schema({
