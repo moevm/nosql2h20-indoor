@@ -3,7 +3,7 @@ let list = ['Here is some text',
     'And here is much much more text than in previous card just for testing',
     'I am going to put couple strings of random text here just for fun. just because I can do that. Nothing will stop me from that. Couple more random words and I am done here'];
 
-//let example_info =  [{name:1, v:2}, {name:2, info:3}, {name:3, info:4}];
+let example_info = [];
 
 let search_list = document.querySelector('.search-item-list');
 let search_button = document.querySelector('.search-submit');
@@ -13,7 +13,6 @@ let inf_block = document.querySelector('.inf-block__info');
 
 search_button.addEventListener('click', search);
 clear_button.addEventListener('click', clear_search_input);
-/*input_text.addEventListener('', input_change);*/
 
 
 function enter() {
@@ -38,15 +37,7 @@ function search() {
         xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
         xhr.responseType = 'json';
         xhr.onload = function () {
-            // if (xhr.readyState != 4) {
-            //     return;
-            // }
-            //let new_info  = document.createElement('p');
-            console.log("HERE")
-            let example_info = JSON.parse(xhr.response);
-            //inf_block.appendChild(new_info);
-            //inf_block.classList.remove('hidden')
-
+            example_info = JSON.parse(xhr.response);
             for(let i = 0; i < example_info.length; i++){
                 let new_item = document.createElement('li');
                 new_item.className = 'search-elem';
@@ -54,9 +45,7 @@ function search() {
                 let new_item_text = document.createElement('b');
                 new_item_text.className = 'item-text';
                 let new_item_textContent = '';
-                for(let item in example_info[i]){
-                    new_item_textContent += item + ': ' + example_info[i][item] + ', ';
-                }
+                new_item_textContent += 'id: ' + example_info[i]['_id'] + ', name: ' + example_info[i]['name'];
                 new_item_text.textContent = new_item_textContent;
                 new_item.append(new_item_text);
                 new_item.addEventListener('mouseover', select);
@@ -65,37 +54,6 @@ function search() {
             }
         };
         xhr.send(new URLSearchParams({search:input_text.value}));
-
-        // let new_info  = document.createElement('p');
-        // for(let i = 0; i < example_info.length; i++){
-        //     let new_item = document.createElement('li');
-        //     new_item.className = 'search-elem';
-        //     new_item.classList.add('search-elem__new-item');
-        //     let new_item_text = document.createElement('b');
-        //     new_item_text.className = 'item-text';
-        //     let new_item_textContent = '';
-        //     for(let item in example_info[i]){
-        //         new_item_textContent += item + ': ' + example_info[i][item] + ', ';
-        //     }
-        //     new_item_text.textContent = new_item_textContent;
-        //     new_item.append(new_item_text);
-        //     new_item.addEventListener('mouseover', select);
-        //     new_item.addEventListener('mouseout', stop_selection);
-        //     search_list.appendChild(new_item);
-        // }
-
-        /*for (let i = 0; i < list.length; i++) {
-            let new_item = document.createElement('li');
-            new_item.className = 'search-elem';
-            new_item.classList.add('search-elem__new-item');
-            let new_item_text = document.createElement('b');
-            new_item_text.className = 'item-text';
-            new_item_text.textContent = list[i];
-            new_item.append(new_item_text);
-            new_item.addEventListener('mouseover', select);
-            new_item.addEventListener('mouseout', stop_selection);
-            search_list.appendChild(new_item);
-        }*/
     } else {
         alert('Wrong value!')
     }
@@ -115,8 +73,16 @@ function select(event) {
         li = event.target.parentElement;
     }
     li.classList.add('selected');
-    let new_info = document.createElement('p');
-    new_info.textContent = li.children.item(0).textContent;
+    let new_info = document.createElement('div');
+    for (let i = 0; i < search_list.children.length; i++){
+        if(search_list.children[i] === li){
+            for(let item in example_info[i]){
+                let new_info_textItem = document.createElement('p');
+                new_info_textItem.textContent = item + ': ' + example_info[i][item] + ';';
+                new_info.appendChild(new_info_textItem);
+            }
+        }
+    }
     inf_block.appendChild(new_info);
     inf_block.classList.remove('hidden')
 }
