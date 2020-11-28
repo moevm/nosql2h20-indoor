@@ -22,6 +22,8 @@ function add_route(method, path, file, options) {
 // GET
 add_route('GET', '/', path.join(appRoot, 'routes/get/index'), upload.none());
 
+add_route('GET', '/export/json', path.join(appRoot, 'routes/get/export_json'), upload.none());
+
 // POST
 add_route('POST', '/search', path.join(appRoot, 'routes/post/search'), upload.none());
 
