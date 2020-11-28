@@ -25,6 +25,20 @@ add_route('GET', '/', path.join(appRoot, 'routes/get/index'));
 add_route('POST', '/search', path.join(appRoot, 'routes/post/search'));
 
 
+const multer = require('multer');
+let storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + path.extname(file.originalname)) //Appending extension
+    }
+})
+let upload = multer({ storage: storage })
+router.post('/import/file', upload.single('data'), require(path.join(appRoot, 'routes/post/import_file')))
+
+//add_route('POST', '/import/file', path.join(appRoot, 'routes/put/import_file'), upload.single('data'));
+
 module.exports = router;
 
 
