@@ -5,6 +5,27 @@ let search_button = document.querySelector('.search-submit');
 let input_text = document.querySelector('.search-input');
 let clear_button = document.querySelector('.search-clear');
 let inf_block = document.querySelector('.inf-block__info');
+let export_btn = document.querySelector('.export');
+export_btn.addEventListener('click', () => {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://127.0.0.1:3000/export/json', true);
+    xhr.responseType = 'json';
+    xhr.onload = function () {
+        console.log(xhr.response.room)
+        let element = document.createElement('a');
+        element.setAttribute('href', 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent(JSON.stringify(xhr.response)));
+        element.setAttribute('download', "test.json");
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    };
+    xhr.send();
+
+});
 
 search_button.addEventListener('click', search);
 clear_button.addEventListener('click', clear_search_input);
