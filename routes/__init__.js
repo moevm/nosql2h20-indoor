@@ -1,6 +1,6 @@
 let router = require('express').Router();
 const path = require('path');
-const upload = require(path.join(appRoot, 'modules/multer_init'))
+const upload = require(path.join(appRoot, 'modules/multer_init'));
 
 function add_route(method, path, file, options) {
     switch (method.toUpperCase()) {

@@ -1,9 +1,10 @@
 const path = require('path');
 const mongoose = require(path.join(appRoot, 'modules/db'));
-const Schema = mongoose.Schema;
 const constants = require(path.join(appRoot, 'modules/constants'));
-const room_type = constants.room_type;
 const wallSchema = require(path.join(appRoot, 'modules/schemas/wall'));
+
+const Schema = mongoose.Schema;
+const room_type = constants.room_type;
 
 const RoomSchema = new Schema({
     _id: {
@@ -47,7 +48,8 @@ RoomSchema.virtual('id').get(function () {
 });
 
 const mongoose_fuzzy_searching = require('mongoose-fuzzy-searching');
-RoomSchema.plugin(mongoose_fuzzy_searching, { fields: [
+RoomSchema.plugin(mongoose_fuzzy_searching, {
+    fields: [
         {
             name: 'tags',
             weight: 5,
@@ -57,6 +59,9 @@ RoomSchema.plugin(mongoose_fuzzy_searching, { fields: [
             minSize: 3,
             weight: 3,
         }
-    ] });
+    ]
+});
+
+console.log("Room schema initialized");
 
 module.exports = Room = mongoose.model('room', RoomSchema, 'rooms');

@@ -34,4 +34,6 @@ const EdgeSchema = new Schema({
     }
 }, { _id: false });
 
+console.log("Edge schema initialized");
+
 module.exports = EdgeSchema;

@@ -21,4 +21,6 @@ const WallSchema = new Schema({
     }
 }, { _id: false });
 
+console.log("Wall schema initialized");
+
 module.exports = WallSchema;
