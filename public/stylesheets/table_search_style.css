@@ -133,3 +133,12 @@ p {
 .import-block_text{
     color: gray;
 }
+.info_name{
+    font-weight: bold;
+    font-size: 40px;
+    color: #110768;
+}
+.info_tags{
+    font-size: 25px;
+    color: gray;
+}

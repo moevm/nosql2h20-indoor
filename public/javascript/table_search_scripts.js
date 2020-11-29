@@ -24,7 +24,7 @@ let example_info = [
         walls: [ [Object], [Object] ],
         confidenceScore: 5.5
     }
-]
+];
 
 let search_list = document.querySelector('.search-item-list');
 let search_button = document.querySelector('.search-submit');
@@ -90,7 +90,7 @@ function uploadFile(file) {
     let xhr = new XMLHttpRequest();
     let formData = new FormData();
     xhr.open('POST', url, true);
-    formData.append('file', file);
+    formData.append('data', file);
     xhr.send(formData)
 }
 
@@ -147,9 +147,20 @@ function select(event) {
     let new_info = document.createElement('div');
     for (let i = 0; i < search_list.children.length; i++){
         if(search_list.children[i] === li){
+            let new_info_name = document.createElement('p');
+            new_info_name.className = 'info_name';
+            new_info_name.textContent = 'name' + ': ' + example_info[i]['name'];
+            new_info.appendChild(new_info_name);
+            let new_info_tags = document.createElement('p');
+            new_info_tags.className = 'info_tags';
+            new_info_tags.textContent = 'tags' + ': ' + example_info[i]['tags'];
+            new_info.appendChild(new_info_tags);
             for(let item in example_info[i]){
+                if(item === 'name' || item === 'tags' || item === 'walls'){
+                    continue;
+                }
                 let new_info_textItem = document.createElement('p');
-                new_info_textItem.textContent = item + ': ' + example_info[i][item] + ';';
+                new_info_textItem.textContent = item + ': ' + example_info[i][item];
                 new_info.appendChild(new_info_textItem);
             }
         }
