@@ -1,37 +1,28 @@
+require('dotenv').config();
+
+const DEBUG = process.env.DEBUG_NESSAGES_ENABLED === "true";
+const SERVER_HOST = process.env.SERVER_HOST;
+const SERVER_PORT = process.env.SERVER_PORT;
+
+console.log = DEBUG ? console.log : function () {};
+console.log(`Server host: ${SERVER_HOST}`);
+console.log(`Server port: ${SERVER_PORT}`);
+
 const express = require('express');
-const mongoose = require('mongoose');
-
 const app = express();
+const path = require('path');
+global.appRoot = __dirname;
+console.log(`App root: '${appRoot}'`);
 
-app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Connect to MongoDB
-mongoose
-  .connect(
-    'mongodb://mongo:27017/docker-node-mongo',
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+app.use('/', require(path.join(__dirname, 'routes/__init__')));
 
-const Item = require('./models/Item');
-
-app.get('/', (req, res) => {
-  Item.find()
-    .then(items => res.render('index', { items }))
-    .catch(err => res.status(404).json({ msg: 'No items found' }));
+let server = app.listen(SERVER_PORT, SERVER_HOST, () => {
+    console.info(`Server running at http://${server.address().address}:${server.address().port}`);
 });
-
-app.post('/item/add', (req, res) => {
-  const newItem = new Item({
-    name: req.body.name
-  });
-
-  newItem.save().then(item => res.redirect('/'));
-});
-
-const port = 3000;
-
-app.listen(port, () => console.log('Server running...'));

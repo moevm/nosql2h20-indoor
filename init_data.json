@@ -1,0 +1,124 @@
+{
+  "room": [
+    {
+      "_id": 1111,
+      "name": "Library",
+      "room_type": 0,
+      "floor": 1,
+      "information": "Closed today!",
+      "tags": "1111,library,book,библиотека,книга",
+      "address": "ул. Попова, д. 5",
+      "walls": [
+        {
+          "coords_start_x": 0,
+          "coords_start_y": 0,
+          "coords_end_x": 1,
+          "coords_end_y": 0
+        },
+        {
+          "coords_start_x": 1,
+          "coords_start_y": 0,
+          "coords_end_x": 1,
+          "coords_end_y": 1
+        }
+      ]
+    },
+    {
+      "_id": 3413,
+      "name": "Computer Science Class",
+      "room_type": 0,
+      "floor": 4,
+      "information": "No outerwear!",
+      "tags": "3413,computer,компьютер",
+      "address": "ул. Попова, д. 5, к. 3",
+      "walls": [
+        {
+          "coords_start_x": 0,
+          "coords_start_y": 0,
+          "coords_end_x": 1,
+          "coords_end_y": 0
+        },
+        {
+          "coords_start_x": 1,
+          "coords_start_y": 0,
+          "coords_end_x": 1,
+          "coords_end_y": 1
+        }
+      ]
+    },
+    {
+      "_id": 5423,
+      "name": "Lecture audience",
+      "room_type": 0,
+      "floor": 4,
+      "tags": "5423,lecture,лекция",
+      "address": "ул. Попова, д. 5",
+      "walls": [
+        {
+          "coords_start_x": 0,
+          "coords_start_y": 0,
+          "coords_end_x": 1,
+          "coords_end_y": 0
+        },
+        {
+          "coords_start_x": 1,
+          "coords_start_y": 0,
+          "coords_end_x": 1,
+          "coords_end_y": 1
+        }
+      ]
+    },
+    {
+      "_id": 5424,
+      "name": "Lecture audience",
+      "room_type": 0,
+      "floor": 4,
+      "tags": "5424,lecture,лекция",
+      "address": "ул. Попова, д. 5",
+      "walls": [
+        {
+          "coords_start_x": 0,
+          "coords_start_y": 0,
+          "coords_end_x": 1,
+          "coords_end_y": 0
+        },
+        {
+          "coords_start_x": 1,
+          "coords_start_y": 0,
+          "coords_end_x": 1,
+          "coords_end_y": 1
+        }
+      ]
+    }
+  ],
+  "vertex": [
+    {
+      "_id": 1111,
+      "transitions": [
+        {
+          "target_id": 1112,
+          "coords_source_floor": 1,
+          "coords_source_x": 0,
+          "coords_source_y": 0,
+          "coords_target_floor": 1,
+          "coords_target_x": 1,
+          "coords_target_y": 1
+        }
+      ]
+    },
+    {
+      "_id": 5423,
+      "transitions": [
+        {
+          "target_id": 5424,
+          "coords_source_floor": 4,
+          "coords_source_x": 1,
+          "coords_source_y": 0,
+          "coords_target_floor": 4,
+          "coords_target_x": 10,
+          "coords_target_y": 1
+        }
+      ]
+    }
+  ]
+}
