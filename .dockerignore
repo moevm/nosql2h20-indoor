@@ -1,5 +1,8 @@
-node_modules
+node_modules/
 npm-debug.log
-screencast.mp4
+screencast.*
 .gitignore
+.env
 README.md
+**/.DS_store
+init_dara.json
