@@ -17,21 +17,17 @@
         <div class="search-list-block">
             <ul class="search-item-list"></ul>
         </div>
+        <div class="import_block" id="drop-area">
+            <form class="my-form">
+                <p class="import-block_text">Drag file or <label class="button" for="fileElem">Choose file</label> to import</p>
+                <input type="file" id="fileElem" multiple accept="*.json" onchange="handleFiles(this.files)">
+            </form>
+        </div>
     </div>
     <div class="inf-block">
         <div class="inf-block__info hidden"></div>
     </div>
 </div>
-<form method="POST" action="http://localhost:3000/import/file" enctype="multipart/form-data">
-    <div>
-        <label>Select your profile picture:</label>
-        <input type="file" name="data" />
-        <input type="submit" value="Import" />
-        <input type="button" class="export" value="Export" />
-
-    </div>
-
-</form>
 <script type="text/javascript" src="javascript/table_search_scripts.js"></script>
 </body>
 </html>

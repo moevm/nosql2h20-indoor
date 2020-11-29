@@ -1,17 +1,58 @@
-let example_info = [];
+let list = ['Here is some text',
+    'Here is a little more text',
+    'And here is much much more text than in previous card just for testing',
+    'I am going to put couple strings of random text here just for fun. just because I can do that. Nothing will stop me from that. Couple more random words and I am done here'];
+
+let example_info = [
+    {
+        room_type: 0,
+        tags: '5424,lecture,лекция',
+        _id: 5424,
+        name: 'Lecture audience',
+        floor: 4,
+        address: 'ул. Попова, д. 5',
+        walls: [ [Object], [Object] ],
+        confidenceScore: 5.5
+    },
+    {
+        room_type: 0,
+        tags: '5423,lecture,лекция',
+        _id: 5423,
+        name: 'Lecture audience',
+        floor: 4,
+        address: 'ул. Попова, д. 5',
+        walls: [ [Object], [Object] ],
+        confidenceScore: 5.5
+    }
+]
 
 let search_list = document.querySelector('.search-item-list');
 let search_button = document.querySelector('.search-submit');
 let input_text = document.querySelector('.search-input');
 let clear_button = document.querySelector('.search-clear');
 let inf_block = document.querySelector('.inf-block__info');
+let dropArea = document.querySelector('.import_block');
 let export_btn = document.querySelector('.export');
+
+search_button.addEventListener('click', search);
+clear_button.addEventListener('click', clear_search_input);
+['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, preventDefaults, false)
+});
+['dragenter', 'dragover'].forEach(eventName => {
+    dropArea.addEventListener(eventName, highlight, false)
+});
+['dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, unhighlight, false)
+});
+dropArea.addEventListener('drop', handleDrop, false);
+
 export_btn.addEventListener('click', () => {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://127.0.0.1:3000/export/json', true);
     xhr.responseType = 'json';
     xhr.onload = function () {
-        console.log(xhr.response.room)
+        console.log(xhr.response.room);
         let element = document.createElement('a');
         element.setAttribute('href', 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent(JSON.stringify(xhr.response)));
         element.setAttribute('download', "test.json");
@@ -24,27 +65,41 @@ export_btn.addEventListener('click', () => {
         document.body.removeChild(element);
     };
     xhr.send();
-
 });
 
-search_button.addEventListener('click', search);
-clear_button.addEventListener('click', clear_search_input);
-
-
-function enter() {
-    search()
+function preventDefaults (e) {
+    e.preventDefault();
+    e.stopPropagation();
 }
+function highlight(e) {
+    dropArea.classList.add('highlight')
+}
+function unhighlight(e) {
+    dropArea.classList.remove('highlight')
+}
+function handleDrop(e) {
+    let dt = e.dataTransfer;
+    let files = dt.files;
+    handleFiles(files)
+}
+function handleFiles(files) {
+    ([...files]).forEach(uploadFile)
+}
+function uploadFile(file) {
+    let url = 'http://localhost:3000/import/file';
+    let xhr = new XMLHttpRequest();
+    let formData = new FormData();
+    xhr.open('POST', url, true);
+    formData.append('file', file);
+    xhr.send(formData)
+}
+
 function clear_list() {
     while (search_list.children.length > 0) {
         search_list.firstChild.remove();
     }
 }
-function input_change() {
-//     search();
-//     if (input_text.value.trim().length > 0){
-//         clear_list()
-//     }
-}
+
 function search() {
     clear_list();
     if (input_text.value.trim().length > 0) {
