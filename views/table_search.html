@@ -17,11 +17,16 @@
         <div class="search-list-block">
             <ul class="search-item-list"></ul>
         </div>
-        <div class="import_block" id="drop-area">
-            <form class="my-form" >
-                <p class="import-block_text">Drag file or <label class="button" for="fileElem">Choose file</label> to import</p>
-                <input type="file" id="fileElem" multiple accept="*.json" onchange="handleFiles(this.files)">
-            </form>
+        <div class="import-export-block">
+            <div class="import_block" id="drop-area">
+                <form class="my-form" >
+                    <p class="import-block_text">Drag file or <label class="button" for="fileElem">Choose file</label> to import</p>
+                    <input type="file" id="fileElem" multiple accept="*.json" onchange="handleFiles(this.files)">
+                </form>
+            </div>
+            <div class="export-block">
+                <input type="button" class="button export-button" value="Export">
+            </div>
         </div>
     </div>
     <div class="inf-block">

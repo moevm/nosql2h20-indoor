@@ -24,7 +24,9 @@ ul{
 .search-list-block{
     height: 75vh;
     overflow-y: scroll;
-}
+}::-webkit-scrollbar{
+    display: none;
+ }
 .search-elem__new-item{
     min-height: 40px;
     margin-top: 10px;
@@ -80,7 +82,6 @@ ul{
 }
 .inf-block{
     /*background-color: red;*/
-
     height: 100%;
     width: 50%;
 }
@@ -100,13 +101,18 @@ ul{
     flex-direction: column;
     justify-content: center;
 }
+.import-export-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 #drop-area {
     display: flex;
     flex-direction: row;
     justify-content: center;
     border: 2px dashed #515eed;
     border-radius: 20px;
-    width: 80%;
+    width: 65%;
     font-family: sans-serif;
     margin: auto;
 }
@@ -137,6 +143,16 @@ p {
     font-weight: bold;
     font-size: 40px;
     color: #110768;
+}
+.export-block{
+    margin-right: 5%;
+    width: 20%;
+}
+.export-button{
+    border-radius: 20px;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
 }
 .info_tags{
     font-size: 25px;

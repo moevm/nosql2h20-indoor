@@ -32,7 +32,7 @@ let input_text = document.querySelector('.search-input');
 let clear_button = document.querySelector('.search-clear');
 let inf_block = document.querySelector('.inf-block__info');
 let dropArea = document.querySelector('.import_block');
-let export_btn = document.querySelector('.export');
+let export_btn = document.querySelector('.export-button');
 
 search_button.addEventListener('click', search);
 clear_button.addEventListener('click', clear_search_input);
