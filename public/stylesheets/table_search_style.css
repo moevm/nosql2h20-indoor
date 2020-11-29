@@ -22,7 +22,9 @@ ul{
     height: 5%;
 }
 .search-list-block{
-    height: 75vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 72vh;
     overflow-y: scroll;
 }::-webkit-scrollbar{
     display: none;
@@ -145,7 +147,7 @@ p {
     color: #110768;
 }
 .export-block{
-    margin-right: 5%;
+    margin-right: 3%;
     width: 20%;
 }
 .export-button{
