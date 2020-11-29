@@ -22,7 +22,7 @@ ul{
     height: 5%;
 }
 .search-list-block{
-    height: 90vh;
+    height: 75vh;
     overflow-y: scroll;
 }
 .search-elem__new-item{
@@ -94,4 +94,42 @@ ul{
     height: 86vh;
     border: 10px solid darkblue;
     border-radius: 10px;
+}
+.my-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#drop-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px dashed #515eed;
+    border-radius: 20px;
+    width: 80%;
+    font-family: sans-serif;
+    margin: auto;
+}
+#drop-area.highlight {
+    border-color: #110768;
+}
+p {
+    font-size: 30px;
+}
+.button {
+    color: white;
+    padding: 10px;
+    background: #515eed;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #515eed;
+}
+.button:hover {
+    background: #515eed;
+}
+#fileElem {
+    display: none;
+}
+.import-block_text{
+    color: gray;
 }
