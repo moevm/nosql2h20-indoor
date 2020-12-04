@@ -52,11 +52,12 @@ RoomSchema.plugin(mongoose_fuzzy_searching, {
     fields: [
         {
             name: 'tags',
+            minSize: 1,
             weight: 5,
         },
         {
             name: 'information',
-            minSize: 3,
+            minSize: 1,
             weight: 3,
         }
     ]
