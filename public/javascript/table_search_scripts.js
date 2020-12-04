@@ -102,7 +102,7 @@ function clear_list() {
 
 function search() {
     clear_list();
-    if (input_text.value.trim().length > 0) {
+    if (input_text.value.trim().length >= 0) {
         let xhr = new XMLHttpRequest();
         xhr.open('POST', 'http://127.0.0.1:3000/search', true);
         xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
@@ -125,8 +125,6 @@ function search() {
             }
         };
         xhr.send(new URLSearchParams({search:input_text.value}));
-    } else {
-        alert('Wrong value!')
     }
 }
 function stop_selection(event) {
