@@ -33,7 +33,7 @@ module.exports = async function (req, res, next) {
     fs.unlink(fpath, (err) => {
         if (err) {
             console.error(err);
-            res.sendStatus(400);
+            res.sendStatus(500);
         }
     });
     res.sendStatus(200);
