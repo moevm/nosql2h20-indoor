@@ -86,10 +86,16 @@ function handleFiles(files) {
     ([...files]).forEach(uploadFile)
 }
 function uploadFile(file) {
-    let url = 'http://localhost:3000/import/file';
+    let url = 'http://127.0.0.1:3000/import/file';
     let xhr = new XMLHttpRequest();
     let formData = new FormData();
     xhr.open('POST', url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.statusText);
+        }
+    };
     formData.append('data', file);
     xhr.send(formData)
 }
