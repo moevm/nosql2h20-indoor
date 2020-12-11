@@ -41,6 +41,10 @@ ul{
     justify-content: space-around;
     align-items: center;
 }
+.empty_search{
+    background-color: #5d5d5d;
+    border: #5d5d5d;
+}
 .item-text{
     margin: 10px;
 }
