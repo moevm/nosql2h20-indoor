@@ -7,11 +7,21 @@ const Room = schemas.room;
 module.exports = function (req, res, next) {
     let query = req.body.search;
     console.log(`Searching '${query}'`);
-    Room.fuzzySearch(`${query}`).limit(search_limit_results).exec((err, doc) => {
-        if (err) {
-            console.error(err);
-        } else {
-            res.set('application/json').json(JSON.stringify(doc));
-        }
-    });
+    if (query) {
+        Room.fuzzySearch(`${query}`).limit(search_limit_results).exec((err, doc) => {
+            if (err) {
+                console.error(err);
+            } else {
+                res.set('application/json').json(JSON.stringify(doc));
+            }
+        });
+    } else {
+        Room.find().exec((err, doc) => {
+            if (err) {
+                console.error(err);
+            } else {
+                res.set('application/json').json(JSON.stringify(doc));
+            }
+        });
+    }
 };
