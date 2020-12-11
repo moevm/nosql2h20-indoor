@@ -120,7 +120,6 @@ function search() {
                 new_item_text.textContent = new_item_textContent;
                 new_item.append(new_item_text);
                 new_item.addEventListener('mouseover', select);
-                new_item.addEventListener('mouseout', stop_selection);
                 search_list.appendChild(new_item);
             }
         };
@@ -129,19 +128,13 @@ function search() {
         alert('Wrong value!')
     }
 }
-function stop_selection(event) {
-    let li = event.target;
-    if(event.target.classList.contains('item-text')){
-        li = event.target.parentElement;
-    }
-    li.classList.remove('selected');
-    inf_block.firstChild.remove();
-    inf_block.classList.add('hidden')
-}
 function select(event) {
     let li = event.target;
     if(event.target.classList.contains('item-text')){
         li = event.target.parentElement;
+    }
+    for(let i = 0; i < search_list.children.length; i++){
+        search_list.children[i].classList.remove('selected');
     }
     li.classList.add('selected');
     let new_info = document.createElement('div');
@@ -164,6 +157,9 @@ function select(event) {
                 new_info.appendChild(new_info_textItem);
             }
         }
+    }
+    if(inf_block.children.length) {
+        inf_block.removeChild(inf_block.children[0]);
     }
     inf_block.appendChild(new_info);
     inf_block.classList.remove('hidden')

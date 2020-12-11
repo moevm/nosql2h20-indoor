@@ -28,7 +28,7 @@ ul{
     overflow-y: scroll;
 }::-webkit-scrollbar{
     display: none;
- }
+}
 .search-elem__new-item{
     min-height: 40px;
     margin-top: 10px;
@@ -87,6 +87,7 @@ ul{
     height: 100%;
     width: 50%;
 }
+
 .hidden{
     display: none;
 }
@@ -97,6 +98,9 @@ ul{
     height: 86vh;
     border: 10px solid darkblue;
     border-radius: 10px;
+    overflow-y: scroll;
+}::-webkit-scrollbar{
+     display: none;
 }
 .my-form{
     display: flex;
