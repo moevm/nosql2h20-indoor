@@ -126,13 +126,13 @@ function clear_list() {
 
 function search() {
     clear_list();
-    if (input_text.value.trim().length >= 0) {
-        let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://127.0.0.1:3000/search', true);
-        xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-        xhr.responseType = 'json';
-        xhr.onload = function () {
-            example_info = JSON.parse(xhr.response);
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://127.0.0.1:3000/search', true);
+    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+    xhr.responseType = 'json';
+    xhr.onload = function () {
+        example_info = JSON.parse(xhr.response);
+        if(example_info.length > 0){
             for(let i = 0; i < example_info.length; i++){
                 let new_item = document.createElement('li');
                 new_item.className = 'search-elem';
@@ -144,26 +144,29 @@ function search() {
                 new_item_text.textContent = new_item_textContent;
                 new_item.append(new_item_text);
                 new_item.addEventListener('mouseover', select);
-                new_item.addEventListener('mouseout', stop_selection);
                 search_list.appendChild(new_item);
             }
-        };
-        xhr.send(new URLSearchParams({search:input_text.value}));
-    }
-}
-function stop_selection(event) {
-    let li = event.target;
-    if(event.target.classList.contains('item-text')){
-        li = event.target.parentElement;
-    }
-    li.classList.remove('selected');
-    inf_block.firstChild.remove();
-    inf_block.classList.add('hidden')
+        } else {
+            let new_item = document.createElement('li');
+            new_item.className = 'search-elem';
+            new_item.classList.add('search-elem__new-item');
+            new_item.classList.add('empty_search');
+            let new_item_text = document.createElement('b');
+            new_item_text.className = 'item-text';
+            new_item_text.textContent = 'No results';
+            new_item.append(new_item_text);
+            search_list.appendChild(new_item);
+        }
+    };
+    xhr.send(new URLSearchParams({search:input_text.value}));
 }
 function select(event) {
     let li = event.target;
     if(event.target.classList.contains('item-text')){
         li = event.target.parentElement;
+    }
+    for(let i = 0; i < search_list.children.length; i++){
+        search_list.children[i].classList.remove('selected');
     }
     li.classList.add('selected');
     let new_info = document.createElement('div');
@@ -186,6 +189,9 @@ function select(event) {
                 new_info.appendChild(new_info_textItem);
             }
         }
+    }
+    if(inf_block.children.length) {
+        inf_block.removeChild(inf_block.children[0]);
     }
     inf_block.appendChild(new_info);
     inf_block.classList.remove('hidden');

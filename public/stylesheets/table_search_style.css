@@ -33,7 +33,7 @@ button:focus {
     overflow-y: scroll;
 }::-webkit-scrollbar{
     display: none;
- }
+}
 .search-elem__new-item{
     min-height: 40px;
     margin-top: 10px;
@@ -45,6 +45,10 @@ button:focus {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+.empty_search{
+    background-color: #5d5d5d;
+    border: #5d5d5d;
 }
 .item-text{
     margin: 10px;
@@ -92,6 +96,7 @@ button:focus {
     height: 100%;
     width: 50%;
 }
+
 .inf-block__info{
     padding: 20px;
     margin: 20px;
@@ -99,6 +104,9 @@ button:focus {
     height: 86vh;
     border: 10px solid darkblue;
     border-radius: 10px;
+    overflow-y: scroll;
+}::-webkit-scrollbar{
+     display: none;
 }
 .my-form{
     display: flex;
