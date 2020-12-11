@@ -33,7 +33,12 @@ let clear_button = document.querySelector('.search-clear');
 let inf_block = document.querySelector('.inf-block__info');
 let dropArea = document.querySelector('.import_block');
 let export_btn = document.querySelector('.export-button');
+let dark_area = document.querySelector('.dark');
+let status_message_area = document.querySelector('.message');
+let status_message = document.querySelector('.message_text');
+let message_button = document.querySelector('.message_button');
 
+message_button.addEventListener('click', hide_message);
 search_button.addEventListener('click', search);
 clear_button.addEventListener('click', clear_search_input);
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -67,6 +72,11 @@ export_btn.addEventListener('click', () => {
     xhr.send();
 });
 
+function hide_message() {
+    status_message.textContent ='';
+    dark_area.classList.add('hidden')
+}
+
 function preventDefaults (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -86,10 +96,24 @@ function handleFiles(files) {
     ([...files]).forEach(uploadFile)
 }
 function uploadFile(file) {
-    let url = 'http://localhost:3000/import/file';
+    let url = 'http://127.0.0.1:3000/import/file';
     let xhr = new XMLHttpRequest();
     let formData = new FormData();
     xhr.open('POST', url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.statusText);
+            dark_area.classList.remove('hidden');
+            if (xhr.status >= 200 && xhr.status <= 300) {
+                status_message_area.classList.add('status_ok');
+            } else {
+                status_message_area.classList.add('status_not_ok');
+            }
+            status_message.textContent = xhr.status + ' ' + xhr.statusText;
+            setTimeout(hide_message, 2000);
+        }
+    };
     formData.append('data', file);
     xhr.send(formData)
 }
@@ -102,13 +126,13 @@ function clear_list() {
 
 function search() {
     clear_list();
-    if (input_text.value.trim().length > 0) {
-        let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://127.0.0.1:3000/search', true);
-        xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-        xhr.responseType = 'json';
-        xhr.onload = function () {
-            example_info = JSON.parse(xhr.response);
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://127.0.0.1:3000/search', true);
+    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+    xhr.responseType = 'json';
+    xhr.onload = function () {
+        example_info = JSON.parse(xhr.response);
+        if(example_info.length > 0){
             for(let i = 0; i < example_info.length; i++){
                 let new_item = document.createElement('li');
                 new_item.className = 'search-elem';
@@ -120,28 +144,29 @@ function search() {
                 new_item_text.textContent = new_item_textContent;
                 new_item.append(new_item_text);
                 new_item.addEventListener('mouseover', select);
-                new_item.addEventListener('mouseout', stop_selection);
                 search_list.appendChild(new_item);
             }
-        };
-        xhr.send(new URLSearchParams({search:input_text.value}));
-    } else {
-        alert('Wrong value!')
-    }
-}
-function stop_selection(event) {
-    let li = event.target;
-    if(event.target.classList.contains('item-text')){
-        li = event.target.parentElement;
-    }
-    li.classList.remove('selected');
-    inf_block.firstChild.remove();
-    inf_block.classList.add('hidden')
+        } else {
+            let new_item = document.createElement('li');
+            new_item.className = 'search-elem';
+            new_item.classList.add('search-elem__new-item');
+            new_item.classList.add('empty_search');
+            let new_item_text = document.createElement('b');
+            new_item_text.className = 'item-text';
+            new_item_text.textContent = 'No results';
+            new_item.append(new_item_text);
+            search_list.appendChild(new_item);
+        }
+    };
+    xhr.send(new URLSearchParams({search:input_text.value}));
 }
 function select(event) {
     let li = event.target;
     if(event.target.classList.contains('item-text')){
         li = event.target.parentElement;
+    }
+    for(let i = 0; i < search_list.children.length; i++){
+        search_list.children[i].classList.remove('selected');
     }
     li.classList.add('selected');
     let new_info = document.createElement('div');
@@ -165,8 +190,11 @@ function select(event) {
             }
         }
     }
+    if(inf_block.children.length) {
+        inf_block.removeChild(inf_block.children[0]);
+    }
     inf_block.appendChild(new_info);
-    inf_block.classList.remove('hidden')
+    inf_block.classList.remove('hidden');
 }
 
 function clear_search_input() {
