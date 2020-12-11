@@ -33,7 +33,12 @@ let clear_button = document.querySelector('.search-clear');
 let inf_block = document.querySelector('.inf-block__info');
 let dropArea = document.querySelector('.import_block');
 let export_btn = document.querySelector('.export-button');
+let dark_area = document.querySelector('.dark');
+let status_message_area = document.querySelector('.message');
+let status_message = document.querySelector('.message_text');
+let message_button = document.querySelector('.message_button');
 
+message_button.addEventListener('click', hide_message);
 search_button.addEventListener('click', search);
 clear_button.addEventListener('click', clear_search_input);
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -67,6 +72,11 @@ export_btn.addEventListener('click', () => {
     xhr.send();
 });
 
+function hide_message() {
+    status_message.textContent ='';
+    dark_area.classList.add('hidden')
+}
+
 function preventDefaults (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -94,6 +104,14 @@ function uploadFile(file) {
         if (xhr.readyState === 4) {
             console.log(xhr.status);
             console.log(xhr.statusText);
+            dark_area.classList.remove('hidden');
+            if (xhr.status >= 200 && xhr.status <= 300) {
+                status_message_area.classList.add('status_ok');
+            } else {
+                status_message_area.classList.add('status_not_ok');
+            }
+            status_message.textContent = xhr.status + ' ' + xhr.statusText;
+            setTimeout(hide_message, 2000);
         }
     };
     formData.append('data', file);
@@ -170,7 +188,7 @@ function select(event) {
         }
     }
     inf_block.appendChild(new_info);
-    inf_block.classList.remove('hidden')
+    inf_block.classList.remove('hidden');
 }
 
 function clear_search_input() {
