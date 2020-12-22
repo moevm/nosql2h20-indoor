@@ -1,28 +1,33 @@
 require('dotenv').config();
 
 const DEBUG = process.env.DEBUG_NESSAGES_ENABLED === "true";
-const SERVER_HOST = process.env.SERVER_HOST;
-const SERVER_PORT = process.env.SERVER_PORT;
 
 console.log = DEBUG ? console.log : function () {};
-console.log(`Server host: ${SERVER_HOST}`);
-console.log(`Server port: ${SERVER_PORT}`);
 
 const express = require('express');
 const app = express();
 const path = require('path');
+const SERVER_HOST = process.env.SERVER_HOST;
+const SERVER_PORT = process.env.SERVER_PORT;
 global.appRoot = __dirname;
-console.log(`App root: '${appRoot}'`);
+
+console.log(`app - host: ${SERVER_HOST}`);
+console.log(`app - port: ${SERVER_PORT}`);
+console.log(`app - root: '${appRoot}'`);
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
+console.log("app - views set");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require(path.join(__dirname, 'routes/__init__')));
+console.log("app - routes set");
+
+require(path.join(__dirname, 'modules/path/graph')).buildGraph().then();
 
 let server = app.listen(SERVER_PORT, SERVER_HOST, () => {
-    console.info(`Server running at http://${server.address().address}:${server.address().port}`);
+    console.info(`app - server running at http://${server.address().address}:${server.address().port}`);
 });

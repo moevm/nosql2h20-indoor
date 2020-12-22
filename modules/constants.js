@@ -3,5 +3,5 @@ module.exports = {
         AUDIENCE: 0,
         CORRIDOR: 1
     },
-    search_limit_results: 5
+    search_limit_results: 20
 }

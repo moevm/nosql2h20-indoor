@@ -16,7 +16,7 @@ function add_route(method, path, file, options) {
         default:
             router.use(path, options, require(file));
     }
-    console.log(`Initialized ${method} route at '${path}' from file '${file.replace('.', './routes')}'`);
+    console.log(`routes - initialized ${method} route at '${path}' from file '${file.replace('.', './routes')}'`);
 }
 
 // GET

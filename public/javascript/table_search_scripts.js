@@ -1,30 +1,6 @@
-let list = ['Here is some text',
-    'Here is a little more text',
-    'And here is much much more text than in previous card just for testing',
-    'I am going to put couple strings of random text here just for fun. just because I can do that. Nothing will stop me from that. Couple more random words and I am done here'];
+const host = 'http://127.0.0.1:3000';
 
-let example_info = [
-    {
-        room_type: 0,
-        tags: '5424,lecture,лекция',
-        _id: 5424,
-        name: 'Lecture audience',
-        floor: 4,
-        address: 'ул. Попова, д. 5',
-        walls: [ [Object], [Object] ],
-        confidenceScore: 5.5
-    },
-    {
-        room_type: 0,
-        tags: '5423,lecture,лекция',
-        _id: 5423,
-        name: 'Lecture audience',
-        floor: 4,
-        address: 'ул. Попова, д. 5',
-        walls: [ [Object], [Object] ],
-        confidenceScore: 5.5
-    }
-];
+let cards_info = [];
 
 let search_list = document.querySelector('.search-item-list');
 let search_button = document.querySelector('.search-submit');
@@ -54,7 +30,7 @@ dropArea.addEventListener('drop', handleDrop, false);
 
 export_btn.addEventListener('click', () => {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://127.0.0.1:3000/export/json', true);
+    xhr.open('GET', `${host}/export/json`, true);
     xhr.responseType = 'json';
     xhr.onload = function () {
         console.log(xhr.response.room);
@@ -96,7 +72,7 @@ function handleFiles(files) {
     ([...files]).forEach(uploadFile)
 }
 function uploadFile(file) {
-    let url = 'http://127.0.0.1:3000/import/file';
+    let url = `${host}/import/file`;
     let xhr = new XMLHttpRequest();
     let formData = new FormData();
     xhr.open('POST', url, true);
@@ -127,20 +103,20 @@ function clear_list() {
 function search() {
     clear_list();
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://127.0.0.1:3000/search', true);
+    xhr.open('POST', `${host}/search`, true);
     xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
     xhr.responseType = 'json';
     xhr.onload = function () {
-        example_info = JSON.parse(xhr.response);
-        if(example_info.length > 0){
-            for(let i = 0; i < example_info.length; i++){
+        cards_info = JSON.parse(xhr.response);
+        if(cards_info.length > 0){
+            for(let i = 0; i < cards_info.length; i++){
                 let new_item = document.createElement('li');
                 new_item.className = 'search-elem';
                 new_item.classList.add('search-elem__new-item');
                 let new_item_text = document.createElement('b');
                 new_item_text.className = 'item-text';
                 let new_item_textContent = '';
-                new_item_textContent += 'id: ' + example_info[i]['_id'] + ', name: ' + example_info[i]['name'];
+                new_item_textContent += 'id: ' + cards_info[i]['_id'] + ', name: ' + cards_info[i]['name'];
                 new_item_text.textContent = new_item_textContent;
                 new_item.append(new_item_text);
                 new_item.addEventListener('mouseover', select);
@@ -174,18 +150,18 @@ function select(event) {
         if(search_list.children[i] === li){
             let new_info_name = document.createElement('p');
             new_info_name.className = 'info_name';
-            new_info_name.textContent = 'name' + ': ' + example_info[i]['name'];
+            new_info_name.textContent = 'name' + ': ' + cards_info[i]['name'];
             new_info.appendChild(new_info_name);
             let new_info_tags = document.createElement('p');
             new_info_tags.className = 'info_tags';
-            new_info_tags.textContent = 'tags' + ': ' + example_info[i]['tags'];
+            new_info_tags.textContent = 'tags' + ': ' + cards_info[i]['tags'];
             new_info.appendChild(new_info_tags);
-            for(let item in example_info[i]){
+            for(let item in cards_info[i]){
                 if(item === 'name' || item === 'tags' || item === 'walls'){
                     continue;
                 }
                 let new_info_textItem = document.createElement('p');
-                new_info_textItem.textContent = item + ': ' + example_info[i][item];
+                new_info_textItem.textContent = item + ': ' + cards_info[i][item];
                 new_info.appendChild(new_info_textItem);
             }
         }
@@ -199,5 +175,6 @@ function select(event) {
 
 function clear_search_input() {
     clear_list();
+    inf_block.classList.add('hidden');
     input_text.value = '';
 }

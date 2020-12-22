@@ -15,6 +15,6 @@ VertexSchema.virtual('id').get(function () {
     return this._id;
 });
 
-console.log("Vertex schema initialized");
+console.log("schemas - vertex schema initialized");
 
 module.exports = Vertex = mongoose.model('vertex', VertexSchema, 'vertices');
