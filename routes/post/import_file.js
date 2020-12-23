@@ -3,7 +3,7 @@ const schemas = require(path.join(appRoot, 'modules/schemas'));
 const Room = schemas.room;
 const Vertex = schemas.vertex;
 const fs = require('fs');
-const rebuildGraph = require(path.join(appRoot, 'modules/path/graph')).buildGraph;
+const rebuildGraph = require(path.join(appRoot, 'modules/path')).buildGraph;
 
 module.exports = async function (req, res, next) {
     console.log("import_file - import request");

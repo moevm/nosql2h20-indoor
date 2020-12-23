@@ -17,16 +17,16 @@ console.log(`app - root: '${appRoot}'`);
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(appRoot, 'views'));
 console.log("app - views set");
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(appRoot, 'public')));
 
-app.use('/', require(path.join(__dirname, 'routes/__init__')));
+app.use('/', require(path.join(appRoot, 'routes/__init__')));
 console.log("app - routes set");
 
-require(path.join(__dirname, 'modules/path/graph')).buildGraph().then();
+require(path.join(appRoot, 'modules/path')).buildGraph().then();
 
 let server = app.listen(SERVER_PORT, SERVER_HOST, () => {
     console.info(`app - server running at http://${server.address().address}:${server.address().port}`);

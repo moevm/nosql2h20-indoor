@@ -31,7 +31,7 @@ const buildPathPoints = async (path) => {
         if (!isEqual(destination, source))
             points.push(destination);
     });
-    console.log("visualization - building path success");
+    console.log("visualization - building visualization success");
     return points;
 };
 
