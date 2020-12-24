@@ -1863,15 +1863,6 @@
           "coords_target_floor": 2,
           "coords_target_x": 6,
           "coords_target_y": 9
-        },
-        {
-          "target_id": 5,
-          "coords_source_floor": 1,
-          "coords_source_x": 6,
-          "coords_source_y": 9,
-          "coords_target_floor": 1,
-          "coords_target_x": 6,
-          "coords_target_y": 0
         }
       ]
     },
@@ -2123,6 +2114,15 @@
       "_id": 52,
       "transitions": [
         {
+          "target_id": 524,
+          "coords_source_floor": 2,
+          "coords_source_x": 6,
+          "coords_source_y": 9,
+          "coords_target_floor": 1,
+          "coords_target_x": 6,
+          "coords_target_y": 7
+        },
+        {
           "target_id": 51,
           "coords_source_floor": 2,
           "coords_source_x": 6,
@@ -2144,15 +2144,6 @@
           "coords_target_floor": 1,
           "coords_target_x": 6,
           "coords_target_y": 3.5
-        },
-        {
-          "target_id": 51,
-          "coords_source_floor": 1,
-          "coords_source_x": 6,
-          "coords_source_y": 0,
-          "coords_target_floor": 1,
-          "coords_target_x": 6,
-          "coords_target_y": 9
         },
         {
           "target_id": 3,
