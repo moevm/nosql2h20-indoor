@@ -752,6 +752,39 @@
       ]
     },
     {
+      "_id": 518,
+      "room_type": 1,
+      "floor": 1,
+      "tags": "518",
+      "address": "ул.Попова",
+      "walls": [
+        {
+          "coords_start_x": 6,
+          "coords_start_y": -1,
+          "coords_end_x": 6,
+          "coords_end_y": -0.5
+        },
+        {
+          "coords_start_x": 6,
+          "coords_start_y": -0.5,
+          "coords_end_x": 12,
+          "coords_end_y": -0.5
+        },
+        {
+          "coords_start_x": 12,
+          "coords_start_y": -0.5,
+          "coords_end_x": 12,
+          "coords_end_y": -1
+        },
+        {
+          "coords_start_x": 12,
+          "coords_start_y": -1,
+          "coords_end_x": 6,
+          "coords_end_y": -1
+        }
+      ]
+    },
+    {
       "_id": 51,
       "room_type": 2,
       "floor": 1,
@@ -2146,13 +2179,13 @@
           "coords_target_y": 3.5
         },
         {
-          "target_id": 3,
+          "target_id": 518,
           "coords_source_floor": 1,
           "coords_source_x": 6,
           "coords_source_y": 0,
           "coords_target_floor": 1,
-          "coords_target_x": 20,
-          "coords_target_y": 3.5
+          "coords_target_x": 6,
+          "coords_target_y": -0.5
         }
       ]
     },
@@ -2643,10 +2676,33 @@
           "coords_target_y": 3.5
         },
         {
-          "target_id": 5,
+          "target_id": 518,
           "coords_source_floor": 1,
           "coords_source_x": 20,
           "coords_source_y": 3.5,
+          "coords_target_floor": 1,
+          "coords_target_x": 12,
+          "coords_target_y": -0.5
+        }
+      ]
+    },
+    {
+      "_id": 518,
+      "transitions": [
+        {
+          "target_id": 3,
+          "coords_source_floor": 1,
+          "coords_source_x": 12,
+          "coords_source_y": -0.5,
+          "coords_target_floor": 1,
+          "coords_target_x": 20,
+          "coords_target_y": 3.5
+        },
+        {
+          "target_id": 5,
+          "coords_source_floor": 1,
+          "coords_source_x": 6,
+          "coords_source_y": -0.5,
           "coords_target_floor": 1,
           "coords_target_x": 6,
           "coords_target_y": 0
