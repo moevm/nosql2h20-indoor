@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const DEBUG = process.env.DEBUG_NESSAGES_ENABLED === "true";
+const DEBUG = process.env.DEBUG_NESSAGES_ENABLED === 'true';
 
 console.log = DEBUG ? console.log : function () {};
 
@@ -22,6 +22,8 @@ app.set('views', path.join(appRoot, 'views'));
 console.log('app - views set');
 
 app.use(express.urlencoded({ extended: true }));
+app.use(require('less-middleware')(path.join(appRoot, 'public')));
+console.log('app - less-middleware enabled');
 app.use(express.static(path.join(appRoot, 'public')));
 
 app.use('/', require(path.join(appRoot, 'routes/__init__')));

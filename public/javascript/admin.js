@@ -16,21 +16,21 @@ message_button.addEventListener('click', hide_message);
 search_button.addEventListener('click', search);
 clear_button.addEventListener('click', clear_search_input);
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-    dropArea.addEventListener(eventName, preventDefaults, false)
+    dropArea.addEventListener(eventName, preventDefaults, false);
 });
 ['dragenter', 'dragover'].forEach(eventName => {
-    dropArea.addEventListener(eventName, highlight, false)
+    dropArea.addEventListener(eventName, highlight, false);
 });
 ['dragleave', 'drop'].forEach(eventName => {
-    dropArea.addEventListener(eventName, unhighlight, false)
+    dropArea.addEventListener(eventName, unhighlight, false);
 });
 dropArea.addEventListener('drop', handleDrop, false);
 
 export_btn.addEventListener('click', function () {
     export_request( function () {
-        console.log(xhr.response.room);
+        console.log(this.response.room);
         let element = document.createElement('a');
-        element.setAttribute('href', 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent(JSON.stringify(xhr.response)));
+        element.setAttribute('href', 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent(JSON.stringify(this.response)));
         element.setAttribute('download', "test.json");
 
         element.style.display = 'none';
@@ -44,7 +44,7 @@ export_btn.addEventListener('click', function () {
 
 function hide_message() {
     status_message.textContent = '';
-    dark_area.classList.add('hidden')
+    dark_area.classList.add('hidden');
 }
 
 function preventDefaults(e) {
@@ -53,35 +53,35 @@ function preventDefaults(e) {
 }
 
 function highlight(e) {
-    dropArea.classList.add('highlight')
+    dropArea.classList.add('highlight');
 }
 
 function unhighlight(e) {
-    dropArea.classList.remove('highlight')
+    dropArea.classList.remove('highlight');
 }
 
 function handleDrop(e) {
     let dt = e.dataTransfer;
     let files = dt.files;
-    handleFiles(files)
+    handleFiles(files);
 }
 
 function handleFiles(files) {
-    ([...files]).forEach(uploadFile)
+    ([...files]).forEach(uploadFile);
 }
 
 function uploadFile(file) {
-    upload_file_request(file, function () {
-        if (xhr.readyState === 4) {
-            console.log(xhr.status);
-            console.log(xhr.statusText);
+    import_file_request(file, function () {
+        if (this.readyState === 4) {
+            console.log(this.status);
+            console.log(this.statusText);
             dark_area.classList.remove('hidden');
-            if (xhr.status >= 200 && xhr.status <= 300) {
+            if (this.status >= 200 && this.status <= 300) {
                 status_message_area.classList.add('status_ok');
             } else {
                 status_message_area.classList.add('status_not_ok');
             }
-            status_message.textContent = xhr.status + ' ' + xhr.statusText;
+            status_message.textContent = this.status + ' ' + this.statusText;
             setTimeout(hide_message, 2000);
         }
     });
@@ -96,7 +96,7 @@ function clear_list() {
 function search() {
     clear_list();
     search_request(input_text.value, function () {
-        cards_info = JSON.parse(xhr.response);
+        cards_info = JSON.parse(this.response);
         if (cards_info.length > 0) {
             for (let i = 0; i < cards_info.length; i++) {
                 let new_item = document.createElement('li');

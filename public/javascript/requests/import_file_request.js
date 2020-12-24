@@ -1,4 +1,4 @@
-function upload_file_request(file, onreadystatechange) {
+function import_file_request(file, onreadystatechange) {
     let url = `${host}/import/file`;
     let xhr = new XMLHttpRequest();
     let formData = new FormData();
