@@ -1,15 +1,15 @@
 const path = require('path');
 const Vertex = require(path.join(appRoot, 'modules/schemas')).vertex;
-const isEqual = require("underscore").isEqual;
+const isEqual = require('underscore').isEqual;
 
 const buildPathPoints = async (path) => {
     console.log(`visualization - building path [${path}]`);
     console.log(`visualization - getting vertices from path`);
     let vertices = await Vertex.find().where('_id').in(path);
-    console.log("visualization - sorting vertices");
+    console.log('visualization - sorting vertices');
     vertices.sort((a, b) => path.findIndex((o => o == a._id)) - path.findIndex((o => o == b._id)));
     let points = [];
-    console.log("visualization - getting points");
+    console.log('visualization - getting points');
     vertices.forEach(function (v, index) {
         if (!vertices[index + 1]) return;
 
@@ -31,7 +31,7 @@ const buildPathPoints = async (path) => {
         if (!isEqual(destination, source))
             points.push(destination);
     });
-    console.log("visualization - building visualization success");
+    console.log('visualization - building visualization success');
     return points;
 };
 

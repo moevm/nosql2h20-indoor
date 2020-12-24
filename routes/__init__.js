@@ -4,13 +4,13 @@ const upload = require(path.join(appRoot, 'modules/multer_init'));
 
 function add_route(method, path, file, options) {
     switch (method.toUpperCase()) {
-        case "GET":
+        case 'GET':
             router.get(path, options, require(file));
             break;
-        case "POST":
+        case 'POST':
             router.post(path, options, require(file));
             break;
-        case "PUT":
+        case 'PUT':
             router.put(path, options, require(file));
             break;
         default:
@@ -20,7 +20,7 @@ function add_route(method, path, file, options) {
 }
 
 // GET
-add_route('GET', '/', path.join(appRoot, 'routes/get/index'), upload.none());
+add_route('GET', '/admin', path.join(appRoot, 'routes/get/admin'), upload.none());
 
 add_route('GET', '/export/json', path.join(appRoot, 'routes/get/export_json'), upload.none());
 

@@ -1,0 +1,35 @@
+extends base
+
+block header
+    link(rel='stylesheet' href='stylesheets/admin.css')
+
+block content
+    .dark.hidden
+        .message
+            p.message_text
+            button.message_button.button OK
+    .window
+        .search-block
+            .search-box.search-elem
+                input.search-input(type='text' placeholder='Search' autocomplete='off')
+                input.search-button.search-clear(type='submit' value='✖')
+                input.fa.fa-search.search-button.search-submit(type='submit' value='')
+            .search-list-block
+                ul.search-item-list
+            .import-export-block
+                #drop-area.import_block
+                    form.my-form
+                        p.import-block_text
+                            | Drag file or
+                            label.button(for='fileElem') Choose file
+                            |  to import
+                        input#fileElem(type='file' multiple='' accept='*.json' onchange='handleFiles(this.files)')
+                .export-block
+                    input.button.export-button(type='button' value='Export')
+        .inf-block
+            .inf-block__info.hidden
+    script(type='text/javascript' src='javascript/export_request.js')
+    script(type='text/javascript' src='javascript/upload_file_request.js')
+    script(type='text/javascript' src='javascript/search_request.js')
+    script(type='text/javascript' src='javascript/admin.js')
+
