@@ -752,37 +752,11 @@
       ]
     },
     {
-      "_id": 518,
-      "room_type": 1,
+      "_id": 51311,
+      "room_type": 5,
       "floor": 1,
-      "tags": "518",
-      "address": "ул.Попова",
-      "walls": [
-        {
-          "coords_start_x": 6,
-          "coords_start_y": -1,
-          "coords_end_x": 6,
-          "coords_end_y": -0.5
-        },
-        {
-          "coords_start_x": 6,
-          "coords_start_y": -0.5,
-          "coords_end_x": 12,
-          "coords_end_y": -0.5
-        },
-        {
-          "coords_start_x": 12,
-          "coords_start_y": -0.5,
-          "coords_end_x": 12,
-          "coords_end_y": -1
-        },
-        {
-          "coords_start_x": 12,
-          "coords_start_y": -1,
-          "coords_end_x": 6,
-          "coords_end_y": -1
-        }
-      ]
+      "tags": "",
+      "address": "ул.Попова"
     },
     {
       "_id": 51,
@@ -2179,7 +2153,7 @@
           "coords_target_y": 3.5
         },
         {
-          "target_id": 518,
+          "target_id": 51311,
           "coords_source_floor": 1,
           "coords_source_x": 6,
           "coords_source_y": 0,
@@ -2676,7 +2650,7 @@
           "coords_target_y": 3.5
         },
         {
-          "target_id": 518,
+          "target_id": 51311,
           "coords_source_floor": 1,
           "coords_source_x": 20,
           "coords_source_y": 3.5,
@@ -2687,7 +2661,7 @@
       ]
     },
     {
-      "_id": 518,
+      "_id": 51311,
       "transitions": [
         {
           "target_id": 3,
