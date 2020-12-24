@@ -63,6 +63,6 @@ RoomSchema.plugin(mongoose_fuzzy_searching, {
     ]
 });
 
-console.log("Room schema initialized");
+console.log("schemas - room schema initialized");
 
 module.exports = Room = mongoose.model('room', RoomSchema, 'rooms');

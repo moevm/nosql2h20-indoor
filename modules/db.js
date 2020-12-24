@@ -15,7 +15,7 @@ mongoose
             useUnifiedTopology: true
         }
     )
-    .then(() => console.log(`MongoDB connected at ${url}`))
+    .then(() => console.log(`db - mongodb connected at ${url}`))
     .catch(err => console.error(err));
 
 module.exports = mongoose;

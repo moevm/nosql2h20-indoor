@@ -6,7 +6,7 @@ const Room = schemas.room;
 
 module.exports = function (req, res, next) {
     let query = req.body.search;
-    console.log(`Searching '${query}'`);
+    console.log(`search - query '${query}'`);
     if (query) {
         Room.fuzzySearch(`${query}`).limit(search_limit_results).exec((err, doc) => {
             if (err) {
