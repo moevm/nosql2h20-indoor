@@ -40,6 +40,7 @@ const RoomSchema = new Schema({
         type: String,
         required: false
     },
+    sign_pos: [{type: Number}],
     walls: [wallSchema]
 }, {versionKey: false});
 

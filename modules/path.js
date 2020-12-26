@@ -7,18 +7,18 @@ const state = {
 };
 
 function testGraphConnectivity(graph, rooms) {
-    console.log("path - testing connectivity");
-    for (let i = 1; i < rooms.length; i++) {
+    console.log('path - testing connectivity');
+    for (let i = 2; i < rooms.length; i++) {
         try {
             graph.shortestPath(rooms[0].toString(), rooms[i].toString());
             graph.shortestPath(rooms[i].toString(), rooms[0].toString());
         } catch (e) {
-            console.log(`path - ${e.message}`);
-            console.log("path - test connectivity failed");
+            console.log(`path - ${e.message}: ${rooms[0]} - ${rooms[i]}`);
+            console.log('path - test connectivity failed');
             return false;
         }
     }
-    console.log("path - test connectivity succeed");
+    console.log('path - test connectivity succeed');
     return true;
 }
 

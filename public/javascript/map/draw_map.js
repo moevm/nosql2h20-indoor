@@ -33,11 +33,29 @@ function update_swg(svg, walls, floor, path = null) {
     walls.forEach(function (t) {
         let width = 6;
         let stroke = 'black';
-        t.walls.forEach(wall => {
-            svg.append(create_line(i, [wall.coords_start_x, wall.coords_start_y],
-                [wall.coords_end_x, wall.coords_end_y], stroke, width));
-            i++;
-        });
+        if ([0, 2].includes(t.room_type)) {
+            t.walls.forEach(wall => {
+                svg.append(create_line(i, [wall.coords_start_x, wall.coords_start_y],
+                    [wall.coords_end_x, wall.coords_end_y], stroke, width));
+                i++;
+            });
+        }
+        if ([0].includes(t.room_type)) {
+            t.sign.forEach(s => {
+                let pos = s.pos;
+                if (!pos)
+                    return;
+                let sign = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                sign.setAttribute('id', i);
+                sign.setAttribute('x', pos[0]);
+                sign.setAttribute('y', pos[1]);
+                sign.setAttribute('font-size', '35');
+                sign.classList.add('svg-element');
+                sign.appendChild(document.createTextNode(s.text))
+                svg.append(sign);
+                i++;
+            });
+        }
     });
     if (path !== null) {
         const img_size = 20;

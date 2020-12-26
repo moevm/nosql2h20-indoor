@@ -87,7 +87,7 @@ rotate_direction_button.addEventListener('click', swap_way_points);
 
 
 function build_way() {
-    if (search_to_input.textContent !== search_from_input.textContent) {
+    if (search_to_input.textContent !== '' && search_from_input.textContent !== '') {
         route = null;
         let source = search_from_input.textContent.split(' ').slice(-1)[0];
         let target = search_to_input.textContent.split(' ').slice(-1)[0];

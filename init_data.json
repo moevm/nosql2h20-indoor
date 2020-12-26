@@ -8,6 +8,7 @@
       "floor": 1,
       "information": "Working day: Monday-Saturday 12.00-18.00",
       "name": "Dining room",
+      "sign_pos": [425, -550],
       "walls": [
         {
           "coords_start_x": 300,
@@ -43,6 +44,7 @@
       "floor": 1,
       "information": "Only for women!",
       "name": "Dressing room",
+      "sign_pos": [775, -425],
       "walls": [
         {
           "coords_start_x": 650,
@@ -78,6 +80,7 @@
       "floor": 1,
       "information": "Only for men!",
       "name": "Dressing room",
+      "sign_pos": [775, -675],
       "walls": [
         {
           "coords_start_x": 650,
@@ -113,6 +116,7 @@
       "floor": 2,
       "information": "Sports hall!",
       "name": "Gym class",
+      "sign_pos": [600, -425],
       "walls": [
         {
           "coords_start_x": 300,
@@ -148,6 +152,7 @@
       "floor": 2,
       "information": "Working day: Monday-Saturday 12.00-16.00",
       "name": "First-aid post",
+      "sign_pos": [425, -675],
       "walls": [
         {
           "coords_start_x": 300,
@@ -183,6 +188,7 @@
       "floor": 2,
       "information": "Storage of sports equipment",
       "name": "Store room",
+      "sign_pos": [775, -675],
       "walls": [
         {
           "coords_start_x": 650,
@@ -217,6 +223,7 @@
       "address": "ул.Попова, д.5, к.1",
       "floor": 3,
       "name": "Biology class",
+      "sign_pos": [425, -425],
       "walls": [
         {
           "coords_start_x": 300,
@@ -251,6 +258,7 @@
       "address": "ул.Попова, д.5, к.1",
       "floor": 3,
       "name": "Biology class",
+      "sign_pos": [425, -675],
       "walls": [
         {
           "coords_start_x": 300,
@@ -285,6 +293,7 @@
       "address": "ул.Попова, д.5, к.1",
       "floor": 3,
       "name": "Ecology class",
+      "sign_pos": [775, -425],
       "walls": [
         {
           "coords_start_x": 650,
@@ -319,6 +328,7 @@
       "address": "ул.Попова, д.5, к.1",
       "floor": 3,
       "name": "Ecology class",
+      "sign_pos": [775, -675],
       "walls": [
         {
           "coords_start_x": 650,
@@ -353,6 +363,7 @@
       "address": "ул.Попова, д.5, к.1",
       "floor": 4,
       "name": "Lecture audience",
+      "sign_pos": [425, -550],
       "walls": [
         {
           "coords_start_x": 300,
@@ -387,6 +398,7 @@
       "address": "ул.Попова, д.5, к.1",
       "floor": 4,
       "name": "Russian language class",
+      "sign_pos": [725, -425],
       "walls": [
         {
           "coords_start_x": 550,
@@ -421,6 +433,7 @@
       "address": "ул.Попова, д.5, к.1",
       "floor": 4,
       "name": "Literature class",
+      "sign_pos": [775, -675],
       "walls": [
         {
           "coords_start_x": 650,
@@ -761,6 +774,7 @@
       "floor": 1,
       "information": "Classroom for practical work!",
       "name": "Math class",
+      "sign_pos": [125, 650],
       "walls": [
         {
           "coords_start_x": 0,
@@ -796,6 +810,7 @@
       "floor": 1,
       "information": "Classroom for practical work!",
       "name": "Math class",
+      "sign_pos": [375, 650],
       "walls": [
         {
           "coords_start_x": 250,
@@ -830,6 +845,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 1,
       "name": "Foreign language class",
+      "sign_pos": [125, 150],
       "walls": [
         {
           "coords_start_x": 0,
@@ -864,6 +880,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 1,
       "name": "Foreign language class",
+      "sign_pos": [375, 150],
       "walls": [
         {
           "coords_start_x": 250,
@@ -899,6 +916,7 @@
       "floor": 1,
       "information": "No outerwear!",
       "name": "Computer Science class",
+      "sign_pos": [825, 650],
       "walls": [
         {
           "coords_start_x": 700,
@@ -934,6 +952,7 @@
       "floor": 1,
       "information": "No outerwear!",
       "name": "Computer Science class",
+      "sign_pos": [1075, 650],
       "walls": [
         {
           "coords_start_x": 950,
@@ -969,6 +988,7 @@
       "floor": 1,
       "information": "No outerwear!",
       "name": "Computer Science class",
+      "sign_pos": [800, 150],
       "walls": [
         {
           "coords_start_x": 700,
@@ -1003,6 +1023,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 1,
       "name": "Lecture audience",
+      "sign_pos": [1050, 150],
       "walls": [
         {
           "coords_start_x": 900,
@@ -1038,6 +1059,7 @@
       "floor": 2,
       "information": "No outerwear!",
       "name": "Laboratory physics",
+      "sign_pos": [250, 600],
       "walls": [
         {
           "coords_start_x": 0,
@@ -1073,6 +1095,7 @@
       "floor": 2,
       "information": "Classroom for practical work!",
       "name": "Physics class",
+      "sign_pos": [250, 375],
       "walls": [
         {
           "coords_start_x": 0,
@@ -1108,6 +1131,7 @@
       "floor": 2,
       "information": "Classroom for practical work!",
       "name": "Physics class",
+      "sign_pos": [250, 125],
       "walls": [
         {
           "coords_start_x": 0,
@@ -1142,6 +1166,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [825, 675],
       "walls": [
         {
           "coords_start_x": 700,
@@ -1176,6 +1201,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [1075, 675],
       "walls": [
         {
           "coords_start_x": 950,
@@ -1211,6 +1237,7 @@
       "floor": 2,
       "information": "Working day: Monday-Friday 12.00-18.00",
       "name": "Open access computer lab",
+      "sign_pos": [825, 175],
       "walls": [
         {
           "coords_start_x": 700,
@@ -1246,6 +1273,7 @@
       "floor": 2,
       "information": "Working day: Mon. 13.00-15.00, Wed. 9.00-11.00.",
       "name": "Bookkeeping",
+      "sign_pos": [1075, 175],
       "walls": [
         {
           "coords_start_x": 950,
@@ -1628,6 +1656,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 1,
       "name": "Philosophical class",
+      "sign_pos": [2125, 550],
       "walls": [
         {
           "coords_start_x": 2000,
@@ -1662,6 +1691,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 1,
       "name": "Management class",
+      "sign_pos": [2375, 550],
       "walls": [
         {
           "coords_start_x": 2250,
@@ -1696,6 +1726,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 1,
       "name": "Management class",
+      "sign_pos": [2625, 550],
       "walls": [
         {
           "coords_start_x": 2500,
@@ -1731,6 +1762,7 @@
       "floor": 1,
       "information": "Working day: Monday through Friday 10.00-16.00, Saturday 12.00-16.00.",
       "name": "Library room",
+      "sign_pos": [2925, 350],
       "walls": [
         {
           "coords_start_x": 2750,
@@ -1765,6 +1797,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 1,
       "name": "Philosophical class",
+      "sign_pos": [2150, 150],
       "walls": [
         {
           "coords_start_x": 2000,
@@ -1800,6 +1833,7 @@
       "floor": 1,
       "information": "Working day: Monday through Friday 10.00-20.00, Saturday 12.00-17.00.",
       "name": "Reading room",
+      "sign_pos": [2450, 150],
       "walls": [
         {
           "coords_start_x": 2300,
@@ -1834,6 +1868,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [2150, 525],
       "walls": [
         {
           "coords_start_x": 2000,
@@ -1868,6 +1903,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [2450, 525],
       "walls": [
         {
           "coords_start_x": 2300,
@@ -1902,6 +1938,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [2150, 125],
       "walls": [
         {
           "coords_start_x": 2000,
@@ -1936,6 +1973,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "History class",
+      "sign_pos": [2500, 125],
       "walls": [
         {
           "coords_start_x": 2400,
@@ -1970,6 +2008,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [2925, 525],
       "walls": [
         {
           "coords_start_x": 2750,
@@ -2004,6 +2043,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Auditorium",
+      "sign_pos": [2925, 175],
       "walls": [
         {
           "coords_start_x": 2750,
