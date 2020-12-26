@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const DEBUG = process.env.DEBUG_NESSAGES_ENABLED === 'true';
+const DEBUG = process.env.DEBUG_MESSAGES_ENABLED === 'true';
 
 console.log = DEBUG ? console.log : function () {};
 
