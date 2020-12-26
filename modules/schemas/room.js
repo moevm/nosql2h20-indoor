@@ -40,6 +40,7 @@ const RoomSchema = new Schema({
         type: String,
         required: false
     },
+    sign_pos: [{type: Number}],
     walls: [wallSchema]
 }, {versionKey: false});
 
@@ -63,6 +64,6 @@ RoomSchema.plugin(mongoose_fuzzy_searching, {
     ]
 });
 
-console.log("schemas - room schema initialized");
+console.log('schemas - room schema initialized');
 
 module.exports = Room = mongoose.model('room', RoomSchema, 'rooms');

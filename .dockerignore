@@ -5,4 +5,4 @@ screencast.*
 .env
 README.md
 **/.DS_store
-init_dara.json
+init_data.json

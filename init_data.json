@@ -2,12 +2,779 @@
   "room": [
     {
       "room_type": 0,
+      "tags": "1101",
+      "_id": 1101,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 1,
+      "information": "Working day: Monday-Saturday 12.00-18.00",
+      "name": "Dining room",
+      "sign_pos": [425, -550],
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -300,
+          "coords_end_x": 550,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -300,
+          "coords_end_x": 550,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -800
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1102",
+      "_id": 1102,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 1,
+      "information": "Only for women!",
+      "name": "Dressing room",
+      "sign_pos": [775, -425],
+      "walls": [
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -550,
+          "coords_end_x": 650,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -550,
+          "coords_end_x": 650,
+          "coords_end_y": -550
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1103",
+      "_id": 1103,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 1,
+      "information": "Only for men!",
+      "name": "Dressing room",
+      "sign_pos": [775, -675],
+      "walls": [
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -800,
+          "coords_end_x": 650,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -550,
+          "coords_end_x": 900,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -550,
+          "coords_end_x": 900,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -800,
+          "coords_end_x": 650,
+          "coords_end_y": -800
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1204",
+      "_id": 1204,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 2,
+      "information": "Sports hall!",
+      "name": "Gym class",
+      "sign_pos": [600, -425],
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -550,
+          "coords_end_x": 300,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -550,
+          "coords_end_x": 300,
+          "coords_end_y": -550
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1205",
+      "_id": 1205,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 2,
+      "information": "Working day: Monday-Saturday 12.00-16.00",
+      "name": "First-aid post",
+      "sign_pos": [425, -675],
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -550,
+          "coords_end_x": 550,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -550,
+          "coords_end_x": 550,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -800
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1206",
+      "_id": 1206,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 2,
+      "information": "Storage of sports equipment",
+      "name": "Store room",
+      "sign_pos": [775, -675],
+      "walls": [
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -800,
+          "coords_end_x": 650,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -550,
+          "coords_end_x": 900,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -550,
+          "coords_end_x": 900,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -800,
+          "coords_end_x": 650,
+          "coords_end_y": -800
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1307",
+      "_id": 1307,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 3,
+      "name": "Biology class",
+      "sign_pos": [425, -425],
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -550,
+          "coords_end_x": 300,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -300,
+          "coords_end_x": 550,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -300,
+          "coords_end_x": 550,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -550,
+          "coords_end_x": 300,
+          "coords_end_y": -550
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1308",
+      "_id": 1308,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 3,
+      "name": "Biology class",
+      "sign_pos": [425, -675],
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -550,
+          "coords_end_x": 550,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -550,
+          "coords_end_x": 550,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -800
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1309",
+      "_id": 1309,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 3,
+      "name": "Ecology class",
+      "sign_pos": [775, -425],
+      "walls": [
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -550,
+          "coords_end_x": 650,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -550,
+          "coords_end_x": 650,
+          "coords_end_y": -550
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1310",
+      "_id": 1310,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 3,
+      "name": "Ecology class",
+      "sign_pos": [775, -675],
+      "walls": [
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -800,
+          "coords_end_x": 650,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -550,
+          "coords_end_x": 900,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -550,
+          "coords_end_x": 900,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -800,
+          "coords_end_x": 650,
+          "coords_end_y": -800
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1411,lecture,лекция",
+      "_id": 1411,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 4,
+      "name": "Lecture audience",
+      "sign_pos": [425, -550],
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -300,
+          "coords_end_x": 550,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -300,
+          "coords_end_x": 550,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -800
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1412",
+      "_id": 1412,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 4,
+      "name": "Russian language class",
+      "sign_pos": [725, -425],
+      "walls": [
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -550,
+          "coords_end_x": 550,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -550,
+          "coords_end_x": 550,
+          "coords_end_y": -550
+        }
+      ]
+    },
+    {
+      "room_type": 0,
+      "tags": "1413",
+      "_id": 1413,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 4,
+      "name": "Literature class",
+      "sign_pos": [775, -675],
+      "walls": [
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -800,
+          "coords_end_x": 650,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -550,
+          "coords_end_x": 900,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -550,
+          "coords_end_x": 900,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -800,
+          "coords_end_x": 650,
+          "coords_end_y": -800
+        }
+      ]
+    },
+    {
+      "room_type": 1,
+      "tags": "111",
+      "_id": 111,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 1,
+      "walls": [
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -800,
+          "coords_end_x": 550,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -300,
+          "coords_end_x": 650,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -300,
+          "coords_end_x": 650,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -800,
+          "coords_end_x": 550,
+          "coords_end_y": -800
+        }
+      ],
+      "name": ""
+    },
+    {
+      "room_type": 1,
+      "tags": "122",
+      "_id": 122,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 2,
+      "walls": [
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -800,
+          "coords_end_x": 550,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -550,
+          "coords_end_x": 650,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -550,
+          "coords_end_x": 650,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -800,
+          "coords_end_x": 550,
+          "coords_end_y": -800
+        }
+      ],
+      "name": ""
+    },
+    {
+      "room_type": 1,
+      "tags": "133",
+      "_id": 133,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 3,
+      "walls": [
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -800,
+          "coords_end_x": 550,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -300,
+          "coords_end_x": 650,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -300,
+          "coords_end_x": 650,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -800,
+          "coords_end_x": 550,
+          "coords_end_y": -800
+        }
+      ],
+      "name": ""
+    },
+    {
+      "room_type": 1,
+      "tags": "144",
+      "_id": 144,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 4,
+      "walls": [
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -800,
+          "coords_end_x": 550,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 550,
+          "coords_start_y": -550,
+          "coords_end_x": 650,
+          "coords_end_y": -550
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -550,
+          "coords_end_x": 650,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 650,
+          "coords_start_y": -800,
+          "coords_end_x": 550,
+          "coords_end_y": -800
+        }
+      ],
+      "name": ""
+    },
+    {
+      "room_type": 2,
+      "tags": "11",
+      "_id": 11,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 1,
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -800
+        }
+      ],
+      "name": ""
+    },
+    {
+      "room_type": 2,
+      "tags": "12",
+      "_id": 12,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 2,
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -800
+        }
+      ],
+      "name": ""
+    },
+    {
+      "room_type": 2,
+      "tags": "13",
+      "_id": 13,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 3,
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -800
+        }
+      ],
+      "name": ""
+    },
+    {
+      "room_type": 2,
+      "tags": "14",
+      "_id": 14,
+      "address": "ул.Попова, д.5, к.1",
+      "floor": 4,
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -800
+        }
+      ],
+      "name": ""
+    },
+    {
+      "room_type": 3,
+      "tags": "1",
+      "_id": 1,
+      "address": "ул.Попова, д.5, к.1",
+      "walls": [
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 300,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -300
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -300,
+          "coords_end_x": 900,
+          "coords_end_y": -800
+        },
+        {
+          "coords_start_x": 900,
+          "coords_start_y": -800,
+          "coords_end_x": 300,
+          "coords_end_y": -800
+        }
+      ],
+      "name": "Building"
+    },
+    {
+      "room_type": 0,
       "tags": "5101,math,practical,математика,практика",
       "_id": 5101,
       "address": "ул.Попова, д.5, к.5",
       "floor": 1,
       "information": "Classroom for practical work!",
       "name": "Math class",
+      "sign_pos": [125, 650],
       "walls": [
         {
           "coords_start_x": 0,
@@ -43,6 +810,7 @@
       "floor": 1,
       "information": "Classroom for practical work!",
       "name": "Math class",
+      "sign_pos": [375, 650],
       "walls": [
         {
           "coords_start_x": 250,
@@ -77,6 +845,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 1,
       "name": "Foreign language class",
+      "sign_pos": [125, 150],
       "walls": [
         {
           "coords_start_x": 0,
@@ -111,6 +880,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 1,
       "name": "Foreign language class",
+      "sign_pos": [375, 150],
       "walls": [
         {
           "coords_start_x": 250,
@@ -146,6 +916,7 @@
       "floor": 1,
       "information": "No outerwear!",
       "name": "Computer Science class",
+      "sign_pos": [825, 650],
       "walls": [
         {
           "coords_start_x": 700,
@@ -181,6 +952,7 @@
       "floor": 1,
       "information": "No outerwear!",
       "name": "Computer Science class",
+      "sign_pos": [1075, 650],
       "walls": [
         {
           "coords_start_x": 950,
@@ -216,6 +988,7 @@
       "floor": 1,
       "information": "No outerwear!",
       "name": "Computer Science class",
+      "sign_pos": [800, 150],
       "walls": [
         {
           "coords_start_x": 700,
@@ -250,6 +1023,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 1,
       "name": "Lecture audience",
+      "sign_pos": [1050, 150],
       "walls": [
         {
           "coords_start_x": 900,
@@ -285,6 +1059,7 @@
       "floor": 2,
       "information": "No outerwear!",
       "name": "Laboratory physics",
+      "sign_pos": [250, 600],
       "walls": [
         {
           "coords_start_x": 0,
@@ -320,6 +1095,7 @@
       "floor": 2,
       "information": "Classroom for practical work!",
       "name": "Physics class",
+      "sign_pos": [250, 375],
       "walls": [
         {
           "coords_start_x": 0,
@@ -355,6 +1131,7 @@
       "floor": 2,
       "information": "Classroom for practical work!",
       "name": "Physics class",
+      "sign_pos": [250, 125],
       "walls": [
         {
           "coords_start_x": 0,
@@ -389,6 +1166,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [825, 675],
       "walls": [
         {
           "coords_start_x": 700,
@@ -423,6 +1201,7 @@
       "address": "ул.Попова, д.5, к.5",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [1075, 675],
       "walls": [
         {
           "coords_start_x": 950,
@@ -458,6 +1237,7 @@
       "floor": 2,
       "information": "Working day: Monday-Friday 12.00-18.00",
       "name": "Open access computer lab",
+      "sign_pos": [825, 175],
       "walls": [
         {
           "coords_start_x": 700,
@@ -493,6 +1273,7 @@
       "floor": 2,
       "information": "Working day: Mon. 13.00-15.00, Wed. 9.00-11.00.",
       "name": "Bookkeeping",
+      "sign_pos": [1075, 175],
       "walls": [
         {
           "coords_start_x": 950,
@@ -552,7 +1333,7 @@
           "coords_end_y": 300
         }
       ],
-      "name": "511"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -586,7 +1367,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "512"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -620,7 +1401,7 @@
           "coords_end_y": 300
         }
       ],
-      "name": "513"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -654,7 +1435,7 @@
           "coords_end_y": 450
         }
       ],
-      "name": "524"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -688,7 +1469,7 @@
           "coords_end_y": 350
         }
       ],
-      "name": "525"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -722,7 +1503,7 @@
           "coords_end_y": 350
         }
       ],
-      "name": "526"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -756,7 +1537,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "527"
+      "name": ""
     },
     {
       "room_type": 5,
@@ -764,7 +1545,7 @@
       "_id": 51311,
       "address": "ул.Попова",
       "floor": 1,
-      "name": "51311",
+      "name": "Street",
       "walls": []
     },
     {
@@ -799,7 +1580,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "51"
+      "name": ""
     },
     {
       "room_type": 2,
@@ -833,7 +1614,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "52"
+      "name": ""
     },
     {
       "room_type": 3,
@@ -866,7 +1647,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "5"
+      "name": "Building"
     },
     {
       "room_type": 0,
@@ -875,6 +1656,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 1,
       "name": "Philosophical class",
+      "sign_pos": [2125, 550],
       "walls": [
         {
           "coords_start_x": 2000,
@@ -909,6 +1691,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 1,
       "name": "Management class",
+      "sign_pos": [2375, 550],
       "walls": [
         {
           "coords_start_x": 2250,
@@ -943,6 +1726,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 1,
       "name": "Management class",
+      "sign_pos": [2625, 550],
       "walls": [
         {
           "coords_start_x": 2500,
@@ -978,6 +1762,7 @@
       "floor": 1,
       "information": "Working day: Monday through Friday 10.00-16.00, Saturday 12.00-16.00.",
       "name": "Library room",
+      "sign_pos": [2925, 350],
       "walls": [
         {
           "coords_start_x": 2750,
@@ -1012,6 +1797,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 1,
       "name": "Philosophical class",
+      "sign_pos": [2150, 150],
       "walls": [
         {
           "coords_start_x": 2000,
@@ -1047,6 +1833,7 @@
       "floor": 1,
       "information": "Working day: Monday through Friday 10.00-20.00, Saturday 12.00-17.00.",
       "name": "Reading room",
+      "sign_pos": [2450, 150],
       "walls": [
         {
           "coords_start_x": 2300,
@@ -1081,6 +1868,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [2150, 525],
       "walls": [
         {
           "coords_start_x": 2000,
@@ -1115,6 +1903,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [2450, 525],
       "walls": [
         {
           "coords_start_x": 2300,
@@ -1149,6 +1938,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [2150, 125],
       "walls": [
         {
           "coords_start_x": 2000,
@@ -1183,6 +1973,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "History class",
+      "sign_pos": [2500, 125],
       "walls": [
         {
           "coords_start_x": 2400,
@@ -1217,6 +2008,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Lecture audience",
+      "sign_pos": [2925, 525],
       "walls": [
         {
           "coords_start_x": 2750,
@@ -1251,6 +2043,7 @@
       "address": "ул.Попова, д.5, к.3",
       "floor": 2,
       "name": "Auditorium",
+      "sign_pos": [2925, 175],
       "walls": [
         {
           "coords_start_x": 2750,
@@ -1310,7 +2103,7 @@
           "coords_end_y": 300
         }
       ],
-      "name": "311"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -1344,7 +2137,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "312"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -1378,7 +2171,7 @@
           "coords_end_y": 250
         }
       ],
-      "name": "323"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -1412,7 +2205,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "324"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -1446,7 +2239,7 @@
           "coords_end_y": 350
         }
       ],
-      "name": "325"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -1480,7 +2273,7 @@
           "coords_end_y": 250
         }
       ],
-      "name": "326"
+      "name": ""
     },
     {
       "room_type": 1,
@@ -1514,7 +2307,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "327"
+      "name": ""
     },
     {
       "room_type": 2,
@@ -1548,7 +2341,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "31"
+      "name": ""
     },
     {
       "room_type": 2,
@@ -1582,7 +2375,7 @@
           "coords_end_y": 0
         }
       ],
-      "name": "32"
+      "name": ""
     },
     {
       "room_type": 3,
@@ -1615,10 +2408,507 @@
           "coords_end_y": 0
         }
       ],
-      "name": "3"
+      "name": "Building"
     }
   ],
   "vertex": [
+    {
+      "_id": 1101,
+      "transitions": [
+        {
+          "target_id": 111,
+          "coords_source_floor": 1,
+          "coords_source_x": 550,
+          "coords_source_y": -550,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -550
+        }
+      ]
+    },
+    {
+      "_id": 1102,
+      "transitions": [
+        {
+          "target_id": 111,
+          "coords_source_floor": 1,
+          "coords_source_x": 650,
+          "coords_source_y": -425,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -425
+        }
+      ]
+    },
+    {
+      "_id": 1103,
+      "transitions": [
+        {
+          "target_id": 111,
+          "coords_source_floor": 1,
+          "coords_source_x": 650,
+          "coords_source_y": -675,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        }
+      ]
+    },
+    {
+      "_id": 1204,
+      "transitions": [
+        {
+          "target_id": 122,
+          "coords_source_floor": 2,
+          "coords_source_x": 600,
+          "coords_source_y": -550,
+          "coords_target_floor": 2,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        }
+      ]
+    },
+    {
+      "_id": 1205,
+      "transitions": [
+        {
+          "target_id": 122,
+          "coords_source_floor": 2,
+          "coords_source_x": 550,
+          "coords_source_y": -675,
+          "coords_target_floor": 2,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        }
+      ]
+    },
+    {
+      "_id": 1206,
+      "transitions": [
+        {
+          "target_id": 122,
+          "coords_source_floor": 2,
+          "coords_source_x": 650,
+          "coords_source_y": -675,
+          "coords_target_floor": 2,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        }
+      ]
+    },
+    {
+      "_id": 1307,
+      "transitions": [
+        {
+          "target_id": 133,
+          "coords_source_floor": 3,
+          "coords_source_x": 550,
+          "coords_source_y": -425,
+          "coords_target_floor": 3,
+          "coords_target_x": 600,
+          "coords_target_y": -425
+        }
+      ]
+    },
+    {
+      "_id": 1309,
+      "transitions": [
+        {
+          "target_id": 133,
+          "coords_source_floor": 3,
+          "coords_source_x": 650,
+          "coords_source_y": -425,
+          "coords_target_floor": 3,
+          "coords_target_x": 600,
+          "coords_target_y": -425
+        }
+      ]
+    },
+    {
+      "_id": 1308,
+      "transitions": [
+        {
+          "target_id": 133,
+          "coords_source_floor": 3,
+          "coords_source_x": 550,
+          "coords_source_y": -675,
+          "coords_target_floor": 3,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        }
+      ]
+    },
+    {
+      "_id": 1310,
+      "transitions": [
+        {
+          "target_id": 133,
+          "coords_source_floor": 3,
+          "coords_source_x": 650,
+          "coords_source_y": -675,
+          "coords_target_floor": 3,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        }
+      ]
+    },
+    {
+      "_id": 1411,
+      "transitions": [
+        {
+          "target_id": 144,
+          "coords_source_floor": 4,
+          "coords_source_x": 550,
+          "coords_source_y": -675,
+          "coords_target_floor": 4,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        }
+      ]
+    },
+    {
+      "_id": 1412,
+      "transitions": [
+        {
+          "target_id": 144,
+          "coords_source_floor": 4,
+          "coords_source_x": 600,
+          "coords_source_y": -550,
+          "coords_target_floor": 4,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        }
+      ]
+    },
+    {
+      "_id": 1413,
+      "transitions": [
+        {
+          "target_id": 144,
+          "coords_source_floor": 4,
+          "coords_source_x": 650,
+          "coords_source_y": -675,
+          "coords_target_floor": 4,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        }
+      ]
+    },
+    {
+      "_id": 111,
+      "transitions": [
+        {
+          "target_id": 1101,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -550,
+          "coords_target_floor": 1,
+          "coords_target_x": 550,
+          "coords_target_y": -550
+        },
+        {
+          "target_id": 1102,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -425,
+          "coords_target_floor": 1,
+          "coords_target_x": 650,
+          "coords_target_y": -425
+        },
+        {
+          "target_id": 1103,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 1,
+          "coords_target_x": 650,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 11,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        },
+        {
+          "target_id": 1,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -425,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -300
+        }
+      ]
+    },
+    {
+      "_id": 122,
+      "transitions": [
+        {
+          "target_id": 1204,
+          "coords_source_floor": 2,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 2,
+          "coords_target_x": 600,
+          "coords_target_y": -550
+        },
+        {
+          "target_id": 1205,
+          "coords_source_floor": 2,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 2,
+          "coords_target_x": 550,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 1206,
+          "coords_source_floor": 2,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 2,
+          "coords_target_x": 650,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 12,
+          "coords_source_floor": 2,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 2,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        }
+      ]
+    },
+    {
+      "_id": 133,
+      "transitions": [
+        {
+          "target_id": 1307,
+          "coords_source_floor": 3,
+          "coords_source_x": 600,
+          "coords_source_y": -425,
+          "coords_target_floor": 3,
+          "coords_target_x": 550,
+          "coords_target_y": -425
+        },
+        {
+          "target_id": 1309,
+          "coords_source_floor": 3,
+          "coords_source_x": 600,
+          "coords_source_y": -425,
+          "coords_target_floor": 3,
+          "coords_target_x": 650,
+          "coords_target_y": -425
+        },
+        {
+          "target_id": 1308,
+          "coords_source_floor": 3,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 3,
+          "coords_target_x": 550,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 1310,
+          "coords_source_floor": 3,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 3,
+          "coords_target_x": 650,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 13,
+          "coords_source_floor": 3,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 3,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        }
+      ]
+    },
+    {
+      "_id": 144,
+      "transitions": [
+        {
+          "target_id": 1411,
+          "coords_source_floor": 4,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 4,
+          "coords_target_x": 550,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 1412,
+          "coords_source_floor": 4,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 4,
+          "coords_target_x": 600,
+          "coords_target_y": -550
+        },
+        {
+          "target_id": 1413,
+          "coords_source_floor": 4,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 4,
+          "coords_target_x": 650,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 14,
+          "coords_source_floor": 4,
+          "coords_source_x": 600,
+          "coords_source_y": -675,
+          "coords_target_floor": 4,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        }
+      ]
+    },
+    {
+      "_id": 11,
+      "transitions": [
+        {
+          "target_id": 111,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 12,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 2,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        }
+      ]
+    },
+    {
+      "_id": 12,
+      "transitions": [
+        {
+          "target_id": 122,
+          "coords_source_floor": 2,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 2,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 11,
+          "coords_source_floor": 2,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        },
+        {
+          "target_id": 13,
+          "coords_source_floor": 2,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 3,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        }
+      ]
+    },
+    {
+      "_id": 13,
+      "transitions": [
+        {
+          "target_id": 133,
+          "coords_source_floor": 3,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 3,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 12,
+          "coords_source_floor": 3,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 2,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        },
+        {
+          "target_id": 14,
+          "coords_source_floor": 3,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 4,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        }
+      ]
+    },
+    {
+      "_id": 14,
+      "transitions": [
+        {
+          "target_id": 144,
+          "coords_source_floor": 4,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 4,
+          "coords_target_x": 600,
+          "coords_target_y": -675
+        },
+        {
+          "target_id": 13,
+          "coords_source_floor": 4,
+          "coords_source_x": 600,
+          "coords_source_y": -800,
+          "coords_target_floor": 3,
+          "coords_target_x": 600,
+          "coords_target_y": -800
+        }
+      ]
+    },
+    {
+      "_id": 1,
+      "transitions": [
+        {
+          "target_id": 111,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -300,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -425
+        },
+        {
+          "target_id": 51311,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -300,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -50
+        }
+      ]
+    },
     {
       "_id": 5105,
       "transitions": [
@@ -1986,7 +3276,7 @@
           "coords_source_floor": 2,
           "coords_source_x": 600,
           "coords_source_y": 900,
-          "coords_target_floor": 1,
+          "coords_target_floor": 2,
           "coords_target_x": 600,
           "coords_target_y": 700
         },
@@ -2193,7 +3483,7 @@
           "coords_source_floor": 1,
           "coords_source_x": 2675,
           "coords_source_y": 0,
-          "coords_target_floor": 2,
+          "coords_target_floor": 1,
           "coords_target_x": 2675,
           "coords_target_y": 200
         },
@@ -2529,6 +3819,15 @@
     {
       "_id": 51311,
       "transitions": [
+        {
+          "target_id": 1,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -50,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -300
+        },
         {
           "target_id": 3,
           "coords_source_floor": 1,

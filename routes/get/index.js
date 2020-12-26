@@ -1,3 +1,3 @@
 module.exports = function (req, res, next) {
-    res.render('table_search.html');
+    res.render('index', {title: 'Indoor navigation', host: `http://${SERVER_HOST}:${SERVER_PORT}`});
 };
