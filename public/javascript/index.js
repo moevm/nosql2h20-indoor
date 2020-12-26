@@ -199,25 +199,24 @@ function choose(event) {
     background_color_grey.classList.remove('hidden');
     block_info.classList.remove('hidden');
     let new_name = document.createElement('p');
-    // let new_info = document.createElement('div');
+    new_name.classList.add('block_name_text');
+    let new_info_text = document.createElement('p');
+    new_info_text.classList.add('new_info_text');
     for (let i = 0; i < search_list.children.length; i++) {
         if (search_list.children[i] === li) {
             new_name.textContent = cards_info[i]['name'] + ' ' + cards_info[i]['_id'];
-            //
-            // let new_info_tags = document.createElement('p');
-            // new_info_tags.className = 'info_tags';
-            // new_info_tags.textContent = 'tags' + ': ' + cards_info[i]['tags'];
-            // new_info.appendChild(new_info_tags);
-            // for (let item in cards_info[i]) {
-            //     if (item === 'name' || item === 'tags' || item === 'walls') {
-            //         continue;
-            //     }
-            //     let new_info_textItem = document.createElement('p');
-            //     new_info_textItem.textContent = item + ': ' + cards_info[i][item];
-            //     new_info.appendChild(new_info_textItem);
-            // }
+
+            if(cards_info[i]['room_type'] === 0){
+                if(cards_info[i]['information'] !== null)
+                    new_info_text.textContent = cards_info[i]['information'];
+            }
+            if(cards_info[i]['room_type'] === 3){
+                if(cards_info[i]['address'] !== null)
+                    new_info_text.textContent = cards_info[i]['address'];
+            }
         }
     }
+    block_info__text.appendChild(new_info_text);
     block_name.appendChild(new_name);
 }
 
