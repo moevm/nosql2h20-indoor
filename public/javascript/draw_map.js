@@ -7,6 +7,7 @@ function create_line(id, coords1, coords2, stroke, width) {
     newLine.setAttribute('y2',coords2[1]);
     newLine.setAttribute("stroke", stroke);
     newLine.setAttribute("stroke-width", width);
+    newLine.classList.add('svg-element');
     return newLine;
 }
 
@@ -17,15 +18,20 @@ function create_stairs(id, coords, size, type) {
     stairs.setAttribute('y',`${coords[1] - size / 2}`);
     stairs.setAttribute('width', size);
     stairs.setAttribute('height', size);
-    stairs.setAttribute('href', `images/stairs-${type}.svg`)
+    stairs.setAttribute('href', `images/stairs-${type}.svg`);
+    stairs.classList.add('svg-element');
     return stairs;
+}
+
+function change_viewBox(svg, minX, minY, maxX, maxY) {
+    svg.setAttribute("viewBox", `${minX} ${minY} ${maxX} ${maxY}`);
 }
 
 function update_swg(svg, walls, floor, path = null) {
     svg.innerHTML = '';
     let i = 0;
     walls.forEach(function (t) {
-        let width = 4 - t.room_type;
+        let width = 6;
         let stroke = 'black';
         t.walls.forEach(wall => {
             svg.append(create_line(i, [wall.coords_start_x, wall.coords_start_y],

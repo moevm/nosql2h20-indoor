@@ -1,0 +1,38 @@
+extends base
+
+block header
+    link(rel='stylesheet' href='stylesheets/admin.css')
+
+block content
+    .interface
+        .indoor-map
+            svg#map-view(viewBox='0 0 1000 1000' height='100%' width='100%')
+        .search-show_card
+            include search_block
+        .route-search-card
+            button.direction.button.direction_button ↓
+            .way_input_block
+                .route_from.search-box
+                    label.search-from_input
+                .route_to.search-box
+                    label.search-to_input
+            button.direction.rotate_direction_button.button ⇋
+        .navigaation
+            - var btn=['⇧', '1', '⇩', '+', '-']
+            each b,i in btn
+                if(b == '1')
+                    button.navigaation-buton.button.floor-level #{b}
+                else
+                    button.navigaation-buton.button(id=b) #{b}
+
+
+    script(type='text/javascript' src='javascript/requests/walls_request.js')
+    script(type='text/javascript' src='javascript/requests/path_find_request.js')
+    script(type='text/javascript' src='javascript/draw_map.js')
+    script(type='text/javascript' src='javascript/mouse_controls.js')
+    script(type='text/javascript' src='javascript/button_controls.js')
+    script(type='text/javascript' src='javascript/requests/export_request.js')
+    script(type='text/javascript' src='javascript/requests/import_file_request.js')
+    script(type='text/javascript' src='javascript/requests/search_request.js')
+    script(type='text/javascript' src='javascript/index.js')
+

@@ -82,7 +82,7 @@ function uploadFile(file) {
                 status_message_area.classList.add('status_not_ok');
             }
             status_message.textContent = this.status + ' ' + this.statusText;
-            setTimeout(hide_message, 2000);
+            setTimeout(hide_message, 5000);
         }
     });
 }
