@@ -2859,22 +2859,13 @@
           "coords_target_y": -425
         },
         {
-          "target_id": 3,
-          "coords_source_floor": 1,
-          "coords_source_x": 600,
-          "coords_source_y": -300,
-          "coords_target_floor": 1,
-          "coords_target_x": 2000,
-          "coords_target_y": 350
-        },
-        {
-          "target_id": 5,
+          "target_id": 51311,
           "coords_source_floor": 1,
           "coords_source_x": 600,
           "coords_source_y": -300,
           "coords_target_floor": 1,
           "coords_target_x": 600,
-          "coords_target_y": 0
+          "coords_target_y": -50
         }
       ]
     },
@@ -3234,15 +3225,6 @@
           "coords_target_floor": 1,
           "coords_target_x": 600,
           "coords_target_y": -50
-        },
-        {
-          "target_id": 1,
-          "coords_source_floor": 1,
-          "coords_source_x": 600,
-          "coords_source_y": 0,
-          "coords_target_floor": 1,
-          "coords_target_x": 600,
-          "coords_target_y": -300
         }
       ]
     },
@@ -3254,7 +3236,7 @@
           "coords_source_floor": 2,
           "coords_source_x": 600,
           "coords_source_y": 900,
-          "coords_target_floor": 1,
+          "coords_target_floor": 2,
           "coords_target_x": 600,
           "coords_target_y": 700
         },
@@ -3461,7 +3443,7 @@
           "coords_source_floor": 1,
           "coords_source_x": 2675,
           "coords_source_y": 0,
-          "coords_target_floor": 2,
+          "coords_target_floor": 1,
           "coords_target_x": 2675,
           "coords_target_y": 200
         },
@@ -3791,21 +3773,21 @@
           "coords_target_floor": 1,
           "coords_target_x": 1200,
           "coords_target_y": -50
-        },
-        {
-          "target_id": 1,
-          "coords_source_floor": 1,
-          "coords_source_x": 2000,
-          "coords_source_y": 350,
-          "coords_target_floor": 1,
-          "coords_target_x": 600,
-          "coords_target_y": -300
         }
       ]
     },
     {
       "_id": 51311,
       "transitions": [
+        {
+          "target_id": 1,
+          "coords_source_floor": 1,
+          "coords_source_x": 600,
+          "coords_source_y": -50,
+          "coords_target_floor": 1,
+          "coords_target_x": 600,
+          "coords_target_y": -300
+        },
         {
           "target_id": 3,
           "coords_source_floor": 1,
