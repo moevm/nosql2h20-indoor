@@ -18,21 +18,20 @@ block content
                     label.search-to_input
             button.direction.rotate_direction_button.button ⇋
         .navigaation
-            - var btn=['⇧', '1', '⇩', '+', '-']
-            each b,i in btn
-                if(b == '1')
-                    button.navigaation-buton.button.floor-level #{b}
+            each btn in ['⇧', '1', '⇩', '+', '-']
+                if(btn === '1')
+                    button.navigaation-buton.button.floor-level #{btn}
                 else
-                    button.navigaation-buton.button(id=b) #{b}
+                    button.navigaation-buton.button(id=btn) #{btn}
 
-
-    script(type='text/javascript' src='javascript/requests/walls_request.js')
-    script(type='text/javascript' src='javascript/requests/path_find_request.js')
-    script(type='text/javascript' src='javascript/draw_map.js')
-    script(type='text/javascript' src='javascript/mouse_controls.js')
-    script(type='text/javascript' src='javascript/button_controls.js')
     script(type='text/javascript' src='javascript/requests/export_request.js')
     script(type='text/javascript' src='javascript/requests/import_file_request.js')
     script(type='text/javascript' src='javascript/requests/search_request.js')
+    script(type='text/javascript' src='javascript/requests/walls_request.js')
+    script(type='text/javascript' src='javascript/requests/path_find_request.js')
+    script(type='text/javascript' src='javascript/map/draw_map.js')
+    script(type='text/javascript' src='javascript/map/zoom_map.js')
+    script(type='text/javascript' src='javascript/controls/mouse_controls.js')
+    script(type='text/javascript' src='javascript/controls/button_controls.js')
     script(type='text/javascript' src='javascript/index.js')
 

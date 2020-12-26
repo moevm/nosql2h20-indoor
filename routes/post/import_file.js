@@ -34,10 +34,6 @@ module.exports = async function (req, res, next) {
     }
     console.log(`import_file - ${vertex_data.length} items imported to vertices`);
 
-    console.log(`import_file - rebuilding graph`);
-    await rebuildGraph();
-    console.log(`import_file - rebuilding graph success`);
-
     fs.unlink(filePath, (err) => {
         if (err) {
             console.error(err);
@@ -46,6 +42,17 @@ module.exports = async function (req, res, next) {
             console.log(`import_file - file '${filePath}' deleted`);
         }
     });
+
+    console.log(`import_file - rebuilding graph`);
+    let success = await rebuildGraph();
+    if (success) {
+        console.log(`import_file - rebuilding graph success`);
+    } else {
+        console.log(`import_file - rebuilding graph failed`);
+        res.sendStatus(400);
+        return;
+    }
+
     console.log(`import_file - done`);
     res.sendStatus(200);
 };

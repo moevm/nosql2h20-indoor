@@ -6,6 +6,22 @@ const state = {
     graph: null
 };
 
+function testGraphConnectivity(graph, rooms) {
+    console.log("path - testing connectivity");
+    for (let i = 1; i < rooms.length; i++) {
+        try {
+            graph.shortestPath(rooms[0].toString(), rooms[i].toString());
+            graph.shortestPath(rooms[i].toString(), rooms[0].toString());
+        } catch (e) {
+            console.log(`path - ${e.message}`);
+            console.log("path - test connectivity failed");
+            return false;
+        }
+    }
+    console.log("path - test connectivity succeed");
+    return true;
+}
+
 const getShortestPath = (source, destination) => {
     if (state.graph === null) {
         console.error('path - error finding path: graph is not built');
@@ -38,7 +54,11 @@ const buildGraph = async () => {
         gr.addEdge(t[0], t[1]);
     });
     console.log('path - build success');
-    state.graph = gr;
+    if (testGraphConnectivity(gr, rooms)) {
+        state.graph = gr;
+        return true;
+    }
+    return false;
 };
 
 module.exports = {getShortestPath, buildGraph};

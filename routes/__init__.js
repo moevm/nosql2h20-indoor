@@ -33,6 +33,8 @@ add_route('GET', '/path/:source(\\d+)/:dest(\\d+)', path.join(appRoot, 'routes/g
 // POST
 add_route('POST', '/search', path.join(appRoot, 'routes/post/search'), upload.none());
 
+add_route('POST', '/search/full', path.join(appRoot, 'routes/post/search_full'), upload.none());
+
 add_route('POST', '/import/file', path.join(appRoot, 'routes/post/import_file'), upload.single('data'));
 
 module.exports = router;

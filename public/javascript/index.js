@@ -1,10 +1,10 @@
 let cards_info = [];
 let minX = 0;
 let minY = 0;
-let maxX = 1000;
-let maxY = 1000;
+let sizeX = 1000;
+let sizeY = 1000;
 let floor = 1;
-let walls;
+let walls = null;
 let route = null;
 
 let body = document.querySelector('body');
@@ -32,26 +32,19 @@ let find_way_from_button = document.querySelector('.find_way_from_button');
 let find_way_to_button = document.querySelector('.find_way_to_button');
 let rotate_direction_button = document.querySelector('.rotate_direction_button');
 
-// let inf_block = document.querySelector('.inf-block__info');
-// let dark_area = document.querySelector('.dark');
-// let status_message_area = document.querySelector('.message');
-// let status_message = document.querySelector('.message_text');
-// let message_button = document.querySelector('.message_button');
-
-// message_button.addEventListener('click', hide_message);
 window.onload = function () {
     update_map(floor);
 };
-direction_clear.addEventListener('mouseover', function() {
+direction_clear.addEventListener('mouseover', function () {
     direction_clear.innerText = '✖';
 });
 direction_clear.addEventListener('click', clear_way_points);
-direction_clear.addEventListener('mouseout', function() {
+direction_clear.addEventListener('mouseout', function () {
     direction_clear.innerText = '↓';
 });
 search_button.addEventListener('click', search);
 clear_button.addEventListener('click', clear_search_input);
-map.addEventListener('wheel', zoom);
+map.addEventListener('wheel', zoom_scroll);
 map.addEventListener('mousedown', mouse_down);
 map.addEventListener('mouseup', mouse_up);
 map.addEventListener('mousemove', mouse_drag);
@@ -72,13 +65,15 @@ zoom_out_button.addEventListener('mousedown', function () {
 });
 zoom_out_button.addEventListener('mouseup', clear_timer);
 zoom_out_button.addEventListener('mouseout', clear_timer);
+
 function clear_timer() {
     clearInterval(timer);
 }
+
 stairs_up_button.addEventListener('click', function () {
-   floor++;
-   floor_label.innerText = floor.toString();
-   update_map(floor);
+    floor++;
+    floor_label.innerText = floor.toString();
+    update_map(floor);
 });
 stairs_down_button.addEventListener('click', function () {
     floor--;
@@ -91,43 +86,41 @@ find_way_to_button.addEventListener('click', make_end_point);
 rotate_direction_button.addEventListener('click', swap_way_points);
 
 
+function build_way() {
+    if (search_to_input.textContent !== search_from_input.textContent) {
+        route = null;
+        let source = search_from_input.textContent.split(' ').slice(-1)[0];
+        let target = search_to_input.textContent.split(' ').slice(-1)[0];
+        update_route(source, target);
+    }
+}
+
 function swap_way_points() {
     let tmp = search_to_input.textContent;
     search_to_input.textContent = search_from_input.textContent;
     search_from_input.textContent = tmp;
-    if(search_to_input.textContent !== '' && search_from_input.textContent !== '') {
-        let b = search_to_input.textContent.split(' ').slice(-1);
-        let a = search_from_input.textContent.split(' ').slice(-1);
-        update_route(a, b);
-    }
+    build_way();
 }
+
 function clear_way_points() {
     search_to_input.textContent = '';
     search_from_input.textContent = '';
     route = null;
     update_swg(map, walls, floor, route);
 }
+
 function make_start_point() {
     search_from_input.textContent = block_name.children[0].textContent;
-    if(search_to_input.textContent === search_from_input.textContent)
+    if (search_to_input.textContent === search_from_input.textContent)
         search_to_input.textContent = '';
-    if(search_to_input.textContent !== '' && search_from_input.textContent !== '') {
-        let b = search_to_input.textContent.split(' ').slice(-1);
-        let a = search_from_input.textContent.split(' ').slice(-1);
-        update_route(a, b);
-    }
-
+    build_way()
 }
 
 function make_end_point() {
     search_to_input.textContent = block_name.children[0].textContent;
-    if(search_to_input.textContent === search_from_input.textContent)
+    if (search_to_input.textContent === search_from_input.textContent)
         search_from_input.textContent = '';
-    if(search_to_input.textContent !== '' && search_from_input.textContent !== '') {
-        let b = search_to_input.textContent.split(' ').slice(-1);
-        let a = search_from_input.textContent.split(' ').slice(-1);
-        update_route(a, b);
-    }
+    build_way();
 }
 
 function update_map(floor) {
@@ -138,6 +131,7 @@ function update_map(floor) {
         }
     });
 }
+
 function update_route(source, target) {
     path_find_request(source, target, function () {
         if (this.readyState === 4) {
@@ -148,7 +142,7 @@ function update_route(source, target) {
 }
 
 function clear_list() {
-    if(search_list_block.classList.contains('hidden'))
+    if (search_list_block.classList.contains('hidden'))
         collapse();
     while (search_list.children.length > 0) {
         search_list.firstChild.remove();
@@ -156,7 +150,7 @@ function clear_list() {
 }
 
 function search() {
-    if(search_list_block.classList.contains('hidden'))
+    if (search_list_block.classList.contains('hidden'))
         collapse();
     clear_list();
     search_request(input_text.value, function () {
@@ -189,6 +183,7 @@ function search() {
         }
     });
 }
+
 function choose(event) {
     let li = event.target;
     if (li.classList.contains('item-text')) {
@@ -227,7 +222,7 @@ function collapse() {
     background_color_grey.classList.add('hidden');
     block_info.classList.add('hidden');
     block_name.firstChild.remove();
-    if(block_info__text.children.length){
+    if (block_info__text.children.length) {
         block_info__text.firstChild.remove();
     }
 }
